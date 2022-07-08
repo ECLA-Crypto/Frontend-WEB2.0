@@ -18,8 +18,7 @@ const Landingpage = () => {
                     <h1 className="text-white sm:text-5xl text-4xl font-semibold">Welcome <br/> Home to DeFi.</h1>
                     <p className="text-xs text-gray-300 mt-4">Swap, earn, and build on the leading decentralized <br/> crypto trading protocol.</p>
                     <span className="flex mt-7 gap-5 flex-wrap">
-                        <button className="connect_btn px-7 py-2.5 text-white text-sm">Connect Wallet</button>
-                        <Link to='/swap' className="trade px-7 py-2.5 text-white text-sm">Trade</Link>
+                        <Link to='/swap' className="connect_btn px-7 py-2.5 text-white text-sm">Connect Wallet</Link>
                     </span>
                 </span>
                 <span className="w-1/2 justify-end items-center md:flex hidden">
@@ -52,28 +51,27 @@ const Landingpage = () => {
             </div>
         </div>
         <div className="mt-20 w-full time_bg py-20">
-            <div className="sm:w-4/5 w-11/12 mx-auto flex justity-between items-center">
+            <div className="sm:w-9/12 w-11/12 mx-auto flex justity-between items-center">
                 <span className="sm:w-1/2 w-full">
                     <h1 className="text-3xl trade_title font-medium">Trade Seamlessly <br/> like you're home.</h1>
                     <p className="mt-3 text-gray-300 text-xs">Swap, earn, and build on the leading decentralized <br/> crypto trading protocol.</p>
                     <span className="flex sm:gap-10 gap-4 items-center mt-6 text-white text-sm flex-wrap">
-                        <Link to='/swap' className="py-2.5 px-7 trade">Trade</Link>
-                        <button className="py-2.5 px-7 border border-white rounded-full">Download Wallet</button>
+                        <Link to='/swap' className="py-2.5 px-7 trade">Connect Wallet</Link>
                     </span>
                 </span>
                 <span className="w-1/2 hidden sm:flex justify-end">
-                   <img src="/assets/logos/bbelogo.svg" className="h-60" alt="BBE Logo" />
+                   <img src="/assets/icons/EBEPLogo.png" className="h-72" alt="BBE Logo" />
                 </span>
             </div>
         </div>
         <div className="mt-20 w-full py-20 time_bg">
-            <div className="sm:w-4/5 w-11/12 mx-auto flex sm:flex-row flex-col justity-between items-center">
+            <div className="sm:w-9/12 w-11/12 mx-auto flex sm:flex-row flex-col justity-between items-center">
                 <span className="sm:w-1/2 w-full">
                     <h1 className="text-3xl trade_title font-medium">An evolving community <br/> for an evolving DeFi <br/> landscape</h1>
                     <p className="mt-3 text-gray-300 text-xs">Swap, earn, and build on the leading decentralized <br/> crypto trading protocol.</p>
                     <span className="flex sm:gap-10 gap-4 items-center mt-6 text-white text-sm flex-wrap">
                         <Link to='/swap' className="py-2.5 px-7 trade">Trade</Link>
-                        <Link to="https://discord.gg/NH3QBa4p" className="py-2.5 px-7 border border-white rounded-full">Join Our Community</Link>
+                        <a href="https://discord.gg/NH3QBa4p" rel="noreferrer" target="_blank" className="py-2.5 px-7 border border-white rounded-full">Join Our Community</a>
                     </span>
                 </span>
                 <span className="w-1/2 sm:flex hidden justify-end">
@@ -89,7 +87,7 @@ const Landingpage = () => {
                 <span className="sm:w-1/3 w-11/12 sm:block sm:mt-0 flex justify-center flex-col items-center mt-3">
                     <h1 className="text-3xl trade_title font-medium">Start trading <br/> in seconds</h1>
                     <span className="flex gap-10 items-center mt-6 text-white text-sm">
-                        <button className="py-2.5 px-7 border border-white rounded-full">Connect Wallet</button>
+                        <Link to='/swap' className="py-2.5 px-7 border border-white rounded-full">Connect Wallet</Link>
                     </span>
                 </span>
             </div>

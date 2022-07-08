@@ -26,7 +26,7 @@ const EclaEcosystem = () => {
           </div>
           <div className="mt-10 w-10/12 flex md:flex-row flex-col gap-10 py-10 mx-auto pt-20">
             <span className="md:w-3/12 flex md:flex-col overflow-x-auto w-full flex-row md:py-5 py-3 md:px-3 gap-5">
-              <Link to='' className="active_eco whitespace-nowrap md:whitespace-normal">Introduction</Link>
+              <p className="whitespace-nowrap font-semibold md:whitespace-normal text-blue-500">Introduction</p>
               <Link to='' className="text-gray-600 text-sm whitespace-nowrap md:whitespace-normal">Sreetwalls NFT MArketplace</Link>
               <Link to='' className="text-gray-600 text-sm whitespace-nowrap md:whitespace-normal">Ecla Reality</Link>
               <Link to='' className="text-gray-600 text-sm whitespace-nowrap md:whitespace-normal">Suntwist Agro Investment Linklatform</Link>

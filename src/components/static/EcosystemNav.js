@@ -129,16 +129,16 @@ const EcosystemNav = () => {
                                     <hr className="border-gray-400 py-3"/>
                                 </Menu.Item>
                                 <Menu.Item>
-                                    <a href='https://twitter.com/EclaEcosystem' className='text-gray-300 flex gap-2 py-2 text-sm font-medium'> <img src="/assets/icons/twitter.svg" className="h-5" alt="Twitter"/>Twitter</a>
+                                    <a href='https://twitter.com/EclaEcosystem' rel="noreferrer" target="_blank" className='text-gray-300 flex gap-2 py-2 text-sm font-medium'> <img src="/assets/icons/twitter.svg" className="h-5" alt="Twitter"/>Twitter</a>
                                 </Menu.Item>
                                 <Menu.Item>
-                                    <a href='https://discord.gg/4YfWcEwkeG' className='text-gray-300 flex gap-2 py-2 text-sm font-medium'><img src="/assets/icons/discord.svg" className="h-5" alt="Discord"/>Discord</a>
+                                    <a href='https://discord.gg/4YfWcEwkeG' rel="noreferrer" target="_blank" className='text-gray-300 flex gap-2 py-2 text-sm font-medium'><img src="/assets/icons/discord.svg" className="h-5" alt="Discord"/>Discord</a>
                                 </Menu.Item>
                                 <Menu.Item>
-                                    <a href='https://reddit.com/r/eclaecosystem' className='text-gray-300 flex gap-2 py-2 text-sm font-medium'> <img src="/assets/icons/reddit.svg" className="h-5" alt="Reddit"/>Reddit</a>
+                                    <a href='https://reddit.com/r/eclaecosystem' rel="noreferrer" target="_blank" className='text-gray-300 flex gap-2 py-2 text-sm font-medium'> <img src="/assets/icons/reddit.svg" className="h-5" alt="Reddit"/>Reddit</a>
                                 </Menu.Item>
                                 <Menu.Item>
-                                    <a href='https://t.me/eclaecosystem' className='text-gray-300 flex gap-2 py-2 text-sm font-medium'> <img src="/assets/icons/telegram.svg" className="h-5" alt="Telegram"/>Telegram</a>
+                                    <a href='https://t.me/eclaecosystem' rel="noreferrer" target="_blank" className='text-gray-300 flex gap-2 py-2 text-sm font-medium'> <img src="/assets/icons/telegram.svg" className="h-5" alt="Telegram"/>Telegram</a>
                                 </Menu.Item>
                             </div>
                         </Menu.Items>
@@ -263,16 +263,16 @@ const EcosystemNav = () => {
                                     <hr className="border-gray-400 py-3"/>
                                 </Menu.Item>
                                 <Menu.Item>
-                                    <a href='https://twitter.com/EclaEcosystem' className='text-gray-300 flex items-center py-2 text-sm font-medium'><img src="/assets/icons/twitter.svg" className="h-5 mr-2" alt="Twitter"/>Twitter</a>
+                                    <a href='https://twitter.com/EclaEcosystem' rel="noreferrer" target="_blank" className='text-gray-300 flex items-center py-2 text-sm font-medium'><img src="/assets/icons/twitter.svg" className="h-5 mr-2" alt="Twitter"/>Twitter</a>
                                 </Menu.Item>
                                 <Menu.Item>
-                                    <a href='https://discord.gg/4YfWcEwkeG' className='text-gray-300 flex items-center py-2 text-sm font-medium'><img src="/assets/icons/discord.svg" className="h-5 mr-2" alt="Discord"/>Discord</a>
+                                    <a href='https://discord.gg/4YfWcEwkeG' rel="noreferrer" target="_blank" className='text-gray-300 flex items-center py-2 text-sm font-medium'><img src="/assets/icons/discord.svg" className="h-5 mr-2" alt="Discord"/>Discord</a>
                                 </Menu.Item>
                                 <Menu.Item>
-                                    <a href='https://reddit.com/r/eclaecosystem' className='text-gray-300 flex items-center py-2 text-sm font-medium'><img src="/assets/icons/reddit.svg" className="h-5 mr-2" alt="Reddit"/>Reddit</a>
+                                    <a href='https://reddit.com/r/eclaecosystem' rel="noreferrer" target="_blank" className='text-gray-300 flex items-center py-2 text-sm font-medium'><img src="/assets/icons/reddit.svg" className="h-5 mr-2" alt="Reddit"/>Reddit</a>
                                 </Menu.Item>
                                 <Menu.Item>
-                                    <a href='https://t.me/eclaecosystem' className='text-gray-300 flex items-center py-2 text-sm font-medium'><img src="/assets/icons/telegram.svg" className="h-5 mr-2" alt="Telegram"/>Telegram</a>
+                                    <a href='https://t.me/eclaecosystem' rel="noreferrer" target="_blank" className='text-gray-300 flex items-center py-2 text-sm font-medium'><img src="/assets/icons/telegram.svg" className="h-5 mr-2" alt="Telegram"/>Telegram</a>
                                 </Menu.Item>
                             </div>
                         </Menu.Items>

@@ -8,7 +8,7 @@ const EclaReality = () => {
             <div className="w-10/12 flex h-full flex-col justify-between  mx-auto">
                 <RealityNav />
                 <span>
-                    <h1 className="font-bold text-3xl sm:text-5xl tracking-widest reality_header_title">WELCOME TO <br/> REAL-GINATION.</h1>
+                    <h1 className="font-bold text-3xl sm:text-5xl tracking-widest reality_header_title">WELCOME TO <br/> ECLA VERSE.</h1>
                     <p className="reality_header_title text-sm md:mt-5 lg:mt-7 sm:w-4/5 md:w-3/5 lg:w-3/5">Swap, earn, and build on the leading decentralized crypto trading protocol.</p>
                     <button className="px-10 py-2.5 text-white sm:mt-9 mt-5 connect_btn text-xs sm:text-sm font-semibold">Get Started</button>
                 </span>
@@ -17,8 +17,8 @@ const EclaReality = () => {
         <div className="w-full py-10 h-screen space">
             <div className="w-10/12 flex h-full flex-col justify-between mx-auto">
                 <span className="my-auto text-white">
-                    <h1 className="font-bold sm:text-7xl text-5xl capitalize">ECLA Verse.</h1>
-                    <h1 className="font-bold sm:text-3xl text-xl sm:mt-7 mt-5 w-4/5 xl:w-2/6">Begin a visit to your imagination</h1>
+                    <h1 className="font-bold text-2xl sm:text-5xl capitalize tracking-widest sm:w-4/5 md:w-3/5 lg:w-3/5"> Begin a visit to REALGINATION.</h1>
+                    <h1 className="font-medium sm:text-xl sm:mt-9 mt-7 w-4/5 xl:w-2/6 flex flex-col">Begin a visit to your <span className="font-bold sm:text-4xl text-2xl">Imagination</span></h1>
                     <p className="text-sm mt-5 sm:mt-7 font-medium w-4/6 xl:w-2/6">Swap, earn, and build on the leading decentralized crypto trading protocol.</p>
                     <button className="px-10 py-2.5 text-white sm:mt-9 mt-5 connect_btn text-xs sm:text-sm font-semibold">Explore</button>
                 </span>

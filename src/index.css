@@ -104,7 +104,7 @@ code {
   background-color: #2C2E5B;
 }
 .circles {
-  background-image: url('/public/assets/circle.png');
+  background-image: url('/public/assets/icons/eclipse.png');
   background-repeat: no-repeat;
   background-position: top;
   background-size:100%;
@@ -151,11 +151,7 @@ code {
   background-position: center;
 }
 .explore_gradient {
-  background: linear-gradient(295.85deg, #0CF1E3 10.34%, #3FACFC 93.54%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+  color: #3FACFC;
 }
 .ecosys_hero{
   background-repeat: no-repeat!important; 

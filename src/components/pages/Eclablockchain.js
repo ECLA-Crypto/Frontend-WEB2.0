@@ -33,10 +33,10 @@ const Eclablockchain = () => {
                     <img src="/assets/blur.png" alt='blur' className="h-32 mt-5 absolute right-5 blur_img mix-blend-hue"/>
                 </span>
             </div>
-            <div className="flex justify-center items-center">
-                <span className="circles h-72 flex flex-col justify-center items-center w-80">
-                    <h1 className="text-xl xl:text-4xl font-semibold text-center text-white mt-5 trade_title">Explore to Get <br/> more out of the <br/> ecosystem</h1>
-                    <p className="explore_gradient underline mt-5">Explore</p>
+            <div className="flex justify-center items-center my-16 md:mt-16 md:mb-0">
+                <span className="circles h-fit flex flex-col justify-center items-center sm:w-5/12 w-10/12">
+                    <h1 className="text-xl xl:text-4xl font-semibold text-center text-white md:mt-24 mt-14 trade_title">Explore to Get <br/> more out of the <br/> ecosystem</h1>
+                    <Link to='/eclaecosystem' className="explore_gradient underline md:mt-10 mt-3">Explore</Link>
                 </span>
             </div>
             <div className="w-full sm:py-20 py-5 time_bg">
@@ -58,7 +58,7 @@ const Eclablockchain = () => {
                         <img src="/assets/logos/eclaRingLogo.svg" className="h-40" alt="BBE Logo" />
                         <img src="/assets/logos/eclacommunity.svg" className="sm:h-10 h-8" alt="ECLA Community Logo"/>
                     </div>
-                    <button className="lg:py-2.5 lg:px-7 text-sm mt-2 md:mb-0 mb-5 py-2 px-3 border border-white rounded-full text-white font-semibold">Connect Wallet</button>
+                    <button className="lg:py-2.5 lg:px-7 text-sm mt-2 md:mb-0 mb-5 py-2 px-3 border border-white rounded-full text-white font-semibold">Join Community</button>
                 </div>
             </div>
         </div>
