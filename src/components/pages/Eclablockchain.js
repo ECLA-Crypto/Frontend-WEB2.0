@@ -58,7 +58,7 @@ const Eclablockchain = () => {
                         <img src="/assets/logos/eclaRingLogo.svg" className="h-40" alt="BBE Logo" />
                         <img src="/assets/logos/eclacommunity.svg" className="sm:h-10 h-8" alt="ECLA Community Logo"/>
                     </div>
-                    <button className="lg:py-2.5 lg:px-7 text-sm mt-2 md:mb-0 mb-5 py-2 px-3 border border-white rounded-full text-white font-semibold">Join Community</button>
+                    <a href="https://discord.gg/NH3QBa4p" rel="noreferrer" target="_blank" className="lg:py-2.5 lg:px-7 text-sm mt-2 md:mb-0 mb-5 py-2 px-3 border border-white rounded-full text-white font-semibold">Join Community</a>
                 </div>
             </div>
         </div>

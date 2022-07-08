@@ -47,7 +47,7 @@ const EcosystemNav = () => {
                     <Menu.Items className="origin-top-left absolute focus:outline-none flex ecosys_dropdown justify-between py-5 mt-2 flex-wrap px-5 z-40">
                         <div className="py-1">
                             <Menu.Item>
-                                <Link to='/swap' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Swap</Link>
+                                <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Swap</Link>
                             </Menu.Item>
                             <Menu.Item>
                                 <Link to='/eclamarket' className='text-gray-300 block py-2 text-sm font-medium'>NFT Marketplace</Link>
@@ -182,7 +182,7 @@ const EcosystemNav = () => {
                         <Menu.Items className="w-ful focus:outline-none flex justify-between flex-wrap px-5 z-40">
                             <div className="py-1 w-full">
                             <Menu.Item>
-                                <Link to='/swap' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Swap</Link>
+                                <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Swap</Link>
                             </Menu.Item>
                             <Menu.Item>
                                 <Link to='/eclamarket' className='text-gray-300 block py-2 text-sm font-medium'>NFT Marketplace</Link>

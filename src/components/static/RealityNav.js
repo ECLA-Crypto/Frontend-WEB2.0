@@ -47,7 +47,7 @@ const RealityNav = () => {
                     <Menu.Items className="origin-top-left absolute focus:outline-none flex bg-gray-300 py-2 mt-2 justify-between flex-wrap px-5 z-40">
                         <div className="py-1">
                             <Menu.Item>
-                                <Link to='/swap' className='text-gray-900 block py-2 text-sm font-medium'>ECLA Swap</Link>
+                                <Link to='/swaplanding' className='text-gray-900 block py-2 text-sm font-medium'>ECLA Swap</Link>
                             </Menu.Item>
                             <Menu.Item>
                                 <Link to='/eclamarket' className='text-gray-900 block py-2 text-sm font-medium'>Market Place</Link>
@@ -80,7 +80,7 @@ const RealityNav = () => {
                     <Menu.Items className="origin-top-left absolute focus:outline-none flex justify-between bg-gray-300 py-2 mt-2 flex-wrap px-5 z-40">
                         <div className="py-1">
                             <Menu.Item>
-                                <Link to='/swap' className='text-gray-900 block py-2 text-sm font-medium'>ECLA Swap</Link>
+                                <Link to='/swaplanding' className='text-gray-900 block py-2 text-sm font-medium'>ECLA Swap</Link>
                             </Menu.Item>
                             <Menu.Item>
                                 <Link to='/eclamarket' className='text-gray-900 block py-2 text-sm font-medium'>Market Place</Link>
@@ -129,7 +129,7 @@ const RealityNav = () => {
                         <Menu.Items className="w-full focus:outline-none flex justify-between flex-wrap px-5 z-40">
                             <div className="py-1 w-full">
                             <Menu.Item>
-                                <Link to='/swap' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Swap</Link>
+                                <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Swap</Link>
                             </Menu.Item>
                             <Menu.Item>
                                 <Link to='/eclamarket' className='text-gray-300 block py-2 text-sm font-medium'>Market Place</Link>
