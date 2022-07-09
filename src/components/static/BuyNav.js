@@ -1,7 +1,7 @@
 import { useState, Fragment } from "react";
 import { Link } from "react-router-dom"
 import { Menu, Transition } from '@headlessui/react'
-const BlockChainNav = () => {
+const BuyNav = () => {
     const [toggle, setToggle] = useState(false)
     const menubarOn = () => {
         setToggle(true);
@@ -10,7 +10,7 @@ const BlockChainNav = () => {
         setToggle(false)
     }
   return (
-    <nav className={`flex justify-between items-center`}>
+    <nav className={`flex justify-between`}>
         <div className="flex items-center gap-10">
             <Link to='/'>
                 <img src="/assets/logos/ecla.svg" className="h-8" alt="ECLA LOGO" />
@@ -23,7 +23,7 @@ const BlockChainNav = () => {
                     <Menu.Button className="inline-flex justify-center items-center w-full rounded-md  shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Developer <span><img src="/assets/icons/downchevron.svg" className=" ml-2" alt="downarrow"/></span></Menu.Button>
                 </div>
                 <Transition as={Fragment} enter="transition ease-out duration-100" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-75" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
-                    <Menu.Items className="origin-top-left absolute focus:outline-none ecosys_dropdown flex justify-between flex-wrap mt-2 px-5 z-40">
+                    <Menu.Items className="origin-top-left absolute focus:outline-none ecosys_dropdown flex justify-between py-5 flex-wrap mt-2 px-5 z-40">
                         <div className="py-1">
                             <Menu.Item>
                                 <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Build on ECLA</Link>
@@ -44,7 +44,7 @@ const BlockChainNav = () => {
                     <Menu.Button className="inline-flex justify-center items-center w-full rounded-md  shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Ecosystem <span><img src="/assets/icons/downchevron.svg" className=" ml-2" alt="downarrow"/></span></Menu.Button>
                 </div>
                 <Transition as={Fragment} enter="transition ease-out duration-100" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-75" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
-                    <Menu.Items className="origin-top-left absolute focus:outline-none flex ecosys_dropdown justify-between mt-2 flex-wrap px-5 z-40">
+                    <Menu.Items className="origin-top-left absolute focus:outline-none flex ecosys_dropdown justify-between py-5 mt-2 flex-wrap px-5 z-40">
                         <div className="py-1">
                             <Menu.Item>
                                 <Link to='/' className='text-gray-300 block py-2 text-sm font-medium'>Getting Started</Link>
@@ -63,6 +63,27 @@ const BlockChainNav = () => {
                             </Menu.Item>
                             <Menu.Item>
                                 <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Stake ECLA</Link>
+                            </Menu.Item>
+                        </div>
+                    </Menu.Items>
+                </Transition>
+            </Menu>
+            {/* Learn */}
+            <Menu as="div" className="text-left">
+                <div>
+                    <Menu.Button className="inline-flex justify-center items-center w-full rounded-md  shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Learn <span><img src="/assets/icons/downchevron.svg" className=" ml-2" alt="downarrow"/></span></Menu.Button>
+                </div>
+                <Transition as={Fragment} enter="transition ease-out duration-100" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-75" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
+                    <Menu.Items className="origin-top-left absolute focus:outline-none flex ecosys_dropdown justify-between py-5 mt-2 flex-wrap px-5 z-40">
+                        <div className="py-1">
+                            <Menu.Item>
+                                <button onClick={()=> window.open("/assets/pdf/whitepaper.pdf","_blank")} className='text-gray-300 block py-2 text-sm font-medium'>Whitepaper</button>
+                            </Menu.Item>
+                            <Menu.Item>
+                                <Link to='/eclamarket' className='text-gray-300 block py-2 text-sm font-medium'>Roadmap</Link>
+                            </Menu.Item>
+                            <Menu.Item>
+                                <Link to='/eclareality' className='text-gray-300 block py-2 text-sm font-medium'>Documentation</Link>
                             </Menu.Item>
                         </div>
                     </Menu.Items>
@@ -87,6 +108,9 @@ const BlockChainNav = () => {
                                 </Menu.Item> */}
                                 <Menu.Item>
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Events</Link>
+                                </Menu.Item>
+                                <Menu.Item>
+                                    <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Breakpoint</Link>
                                 </Menu.Item>
                                 <Menu.Item>
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Branding</Link>
@@ -132,35 +156,23 @@ const BlockChainNav = () => {
                                     <a href='https://twitter.com/EclaEcosystem' rel="noreferrer" target="_blank" className='text-gray-300 flex gap-2 py-2 text-sm font-medium'> <img src="/assets/icons/twitter.svg" className="h-5" alt="Twitter"/>Twitter</a>
                                 </Menu.Item>
                                 <Menu.Item>
-                                    <a href='https://discord.gg/4YfWcEwkeG' target="_blank" rel="noreferrer" className='text-gray-300 flex gap-2 py-2 text-sm font-medium'><img src="/assets/icons/discord.svg" className="h-5" alt="Discord"/>Discord</a>
+                                    <a href='https://discord.gg/4YfWcEwkeG' rel="noreferrer" target="_blank" className='text-gray-300 flex gap-2 py-2 text-sm font-medium'><img src="/assets/icons/discord.svg" className="h-5" alt="Discord"/>Discord</a>
                                 </Menu.Item>
                                 <Menu.Item>
-                                    <a href='https://reddit.com/r/eclaecosystem' target="_blank" rel="noreferrer" className='text-gray-300 flex gap-2 py-2 text-sm font-medium'> <img src="/assets/icons/reddit.svg" className="h-5" alt="Reddit"/>Reddit</a>
+                                    <a href='https://reddit.com/r/eclaecosystem' rel="noreferrer" target="_blank" className='text-gray-300 flex gap-2 py-2 text-sm font-medium'> <img src="/assets/icons/reddit.svg" className="h-5" alt="Reddit"/>Reddit</a>
                                 </Menu.Item>
                                 <Menu.Item>
-                                    <a href='https://t.me/eclaecosystem' target="_blank" rel="noreferrer" className='text-gray-300 flex gap-2 py-2 text-sm font-medium'> <img src="/assets/icons/telegram.svg" className="h-5" alt="Telegram"/>Telegram</a>
+                                    <a href='https://t.me/eclaecosystem' rel="noreferrer" target="_blank" className='text-gray-300 flex gap-2 py-2 text-sm font-medium'> <img src="/assets/icons/telegram.svg" className="h-5" alt="Telegram"/>Telegram</a>
                                 </Menu.Item>
                             </div>
                         </Menu.Items>
                     </Transition>
                 </Menu>
-            {/* Learn */}
+            {/* Buy Button */}
             <Menu as="div" className="text-left">
                 <div>
-                    <Menu.Button className="inline-flex justify-center items-center w-full rounded-md  shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Learn <span><img src="/assets/icons/downchevron.svg" className=" ml-2" alt="downarrow"/></span></Menu.Button>
+                    <Link to='/buyecla' className="inline-flex justify-center items-center w-full rounded-md connect_btn rounded-full shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Buy ECLA</Link>
                 </div>
-                <Transition as={Fragment} enter="transition ease-out duration-100" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-75" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
-                    <Menu.Items className="origin-top-left absolute focus:outline-none flex ecosys_dropdown justify-between mt-2 flex-wrap px-4 z-40">
-                        <div className="py-1">
-                            <Menu.Item>
-                                <button onClick={()=> window.open("/assets/pdf/whitepaper.pdf","_blank")} className='text-gray-300 block py-2 text-sm font-medium'>Whitepaper</button>
-                            </Menu.Item>
-                            <Menu.Item> 
-                                <Link to='/eclamarket' className='text-gray-300 block py-2 text-sm font-medium'>Road Map</Link>
-                            </Menu.Item>
-                        </div>
-                    </Menu.Items>
-                </Transition>
             </Menu>
         </ul>
         {toggle?
@@ -186,7 +198,6 @@ const BlockChainNav = () => {
                         </Menu.Items>
                     </Transition>
                 </Menu> */}
-                {/* Ecosystem */}
                 <Menu as="div" className="text-left">
                     <div>
                         <Menu.Button className="inline-flex justify-start items-center w-full rounded-md  shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Ecosystem <span><img src="/assets/icons/downchevron.svg" className=" ml-2" alt="downarrow"/></span></Menu.Button>
@@ -216,7 +227,26 @@ const BlockChainNav = () => {
                         </Menu.Items>
                     </Transition>
                 </Menu>
-                {/* community */}
+                <Menu as="div" className="text-left">
+                    <div>
+                        <Menu.Button className="inline-flex justify-start items-center w-full rounded-md  shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Learn <span><img src="/assets/icons/downchevron.svg" className=" ml-2" alt="downarrow"/></span></Menu.Button>
+                    </div>
+                    <Transition as={Fragment} enter="transition ease-out duration-100" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-75" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
+                        <Menu.Items className="w-ful focus:outline-none flex justify-between flex-wrap px-5 z-40">
+                            <div className="py-1 w-full">
+                            <Menu.Item>
+                                <button onClick={()=> window.open("/assets/pdf/whitepaper.pdf","_blank")} className='text-gray-300 block py-2 text-sm font-medium'>Whitepaper</button>
+                            </Menu.Item>
+                            <Menu.Item>
+                                <Link to='/eclamarket' className='text-gray-300 block py-2 text-sm font-medium'>Roadmap</Link>
+                            </Menu.Item>
+                            <Menu.Item>
+                                <Link to='/eclareality' className='text-gray-300 block py-2 text-sm font-medium'>Documentation</Link>
+                            </Menu.Item>
+                            </div>
+                        </Menu.Items>
+                    </Transition>
+                </Menu>
                 <Menu as="div" className="text-left">
                     <div>
                         <Menu.Button className="inline-flex justify-start items-center w-full rounded-md  shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Community <span><img src="/assets/icons/downchevron.svg" className=" ml-2" alt="downarrow"/></span></Menu.Button>
@@ -235,6 +265,9 @@ const BlockChainNav = () => {
                                 </Menu.Item> */}
                                 <Menu.Item>
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Events</Link>
+                                </Menu.Item>
+                                <Menu.Item>
+                                    <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Breakpoint</Link>
                                 </Menu.Item>
                                 <Menu.Item>
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Branding</Link>
@@ -292,24 +325,10 @@ const BlockChainNav = () => {
                         </Menu.Items>
                     </Transition>
                 </Menu>
-                {/* Learn */}
-                <Menu as="div" className="text-left">
-                    <div>
-                        <Menu.Button className="inline-flex justify-start items-center w-full rounded-md  shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Learn <span><img src="/assets/icons/downchevron.svg" className=" ml-2" alt="downarrow"/></span></Menu.Button>
-                    </div>
-                    <Transition as={Fragment} enter="transition ease-out duration-100" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-75" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
-                        <Menu.Items className="w-ful focus:outline-none flex justify-between flex-wrap px-5 z-40">
-                            <div className="py-1 w-full">
-                            <Menu.Item>
-                                <button onClick={()=> window.open("/assets/pdf/whitepaper.pdf","_blank")} className='text-gray-300 block py-2 text-sm font-medium'>Whitepaper</button>
-                            </Menu.Item>
-                            <Menu.Item>
-                                <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>Road Map</Link>
-                            </Menu.Item>
-                            </div>
-                        </Menu.Items>
-                    </Transition>
-                </Menu>
+                {/* Buy Button */}
+                <li>
+                    <Link to='/buyecla' className="inline-flex justify-center items-center ml-3 rounded-md connect_btn rounded-full shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Buy ECLA</Link>
+                </li>
             </ul>
             <button className="h-screen w-3/12 flex py-10" onClick={menubarOff}>
                 <button onClick={menubarOff} className="absolute right-5">
@@ -323,4 +342,5 @@ const BlockChainNav = () => {
     </nav>
   )
 }
-export default BlockChainNav
+
+export default BuyNav

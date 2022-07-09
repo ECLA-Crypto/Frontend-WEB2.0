@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="border-t border-white w-full mt-20">
         <div className="w-4/5 py-8 flex md:flex-row flex-col justify-between items-center text-white mx-auto">
-            <small>@2022. All Right Reserved</small>
+            <small>@2022. ECLA llc</small>
             <div className="flex items-center gap-3 mt-3 md:mt-0">
                 <a href='https://t.me/eclaecosystem' target="_blank" rel="noreferrer"><img src="/assets/icons/telegram.svg" className="h-5" alt="Telegram"/></a>
                 <a href='https://twitter.com/EclaEcosystem' target="_blank" rel="noreferrer"><img src="/assets/icons/twitter.svg" className="h-5" alt="Twitter"/></a>

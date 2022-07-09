@@ -27,13 +27,11 @@ const EclaEcosystem = () => {
           <div className="mt-10 w-10/12 flex md:flex-row flex-col gap-10 py-10 mx-auto pt-20">
             <span className="md:w-3/12 flex md:flex-col overflow-x-auto w-full flex-row md:py-5 py-3 md:px-3 gap-5">
               <p className="whitespace-nowrap font-semibold md:whitespace-normal text-blue-500">Introduction</p>
-              <Link to='' className="text-gray-600 text-sm whitespace-nowrap md:whitespace-normal">Sreetwalls NFT MArketplace</Link>
+              <Link to='' className="text-gray-600 text-sm whitespace-nowrap md:whitespace-normal">NFT Marketplace</Link>
               <Link to='' className="text-gray-600 text-sm whitespace-nowrap md:whitespace-normal">Ecla Reality</Link>
-              <Link to='' className="text-gray-600 text-sm whitespace-nowrap md:whitespace-normal">Suntwist Agro Investment Linklatform</Link>
-              <Link to='' className="text-gray-600 text-sm whitespace-nowrap md:whitespace-normal">Prime Edifice Real Estate</Link>
-              <Link to='' className="text-gray-600 text-sm whitespace-nowrap md:whitespace-normal">Staking & Lunchpad</Link>
-              <Link to='' className="text-gray-600 text-sm whitespace-nowrap md:whitespace-normal">Green Mail eCommerce</Link>
-              <Link to='' className="text-gray-600 text-sm whitespace-nowrap md:whitespace-normal">Token</Link>
+              <Link to='' className="text-gray-600 text-sm whitespace-nowrap md:whitespace-normal">ECLA Wallet</Link>
+              <Link to='' className="text-gray-600 text-sm whitespace-nowrap md:whitespace-normal">ECLA Bridge</Link>
+              <Link to='' className="text-gray-600 text-sm whitespace-nowrap md:whitespace-normal">ECLA Staking</Link>
             </span>
             <span className="md:w-8/12 w-full">
               <div className="w-full flex md:flex-row flex-col items-center justify-between">
@@ -77,9 +75,14 @@ const EclaEcosystem = () => {
                 <span className="md:w-6/12 w-full">
                     <h1 className="text-xl font-semibold ecosysTitles">ECLA Wallet</h1>
                     <p className="text-xs text-gray-700 mt-5">A desire to eat healthy combined with the widespread adoption of technology across all domains has resulted in agribusinesses searching for supply chain management software to improve food safety, food quality, and the traceability of the entire farming supply chain.</p>
-                    <Link to='/swap'>
-                      <button className="connect_btn px-8 py-2 mt-7 text-white">Swap</button>
-                    </Link>
+                    <div className="flex flex-col sm:flex-row sm:gap-5 gap-0">
+                      <Link to='/swap'>
+                        <button className="connect_btn px-8 py-2 mt-7 text-white">Swap</button>
+                      </Link>
+                      <Link to='/buyecla'>
+                        <button className="border-blue-500 font-medium border rounded-full text-blue-500 px-8 py-2 mt-7 text-white">Download Wallet</button>
+                      </Link>
+                    </div>
                 </span>
                 <span className="md:w-4/12 w-full md:mt-0 mt-5">
                     <img src="/assets/icons/eclaWallet.png" className="md:h-fit h-32 mx-auto" alt="SmallLeaves"/>
@@ -90,7 +93,7 @@ const EclaEcosystem = () => {
                 <span className="md:w-6/12 w-full">
                     <h1 className="text-xl font-semibold ecosysTitles">ECLA Bridge</h1>
                     <p className="text-xs text-gray-700 mt-5">According to the Reportlinker, the US real estate commercial real market is worth over $4.5 trillion, an indication that the industry is well thronged by investors globally. Understandably, the demand for housing both, residential and commercial will continue to rise.</p>
-                    <button className="connect_btn px-8 py-2 mt-7 text-white">Read Whitepaper</button>
+                    <button className="connect_btn px-8 py-2 mt-7 text-white">Connect</button>
                 </span>
                 <span className="md:w-5/12 w-full md:mt-0 mt-5">
                     <img src="/assets/icons/eclaBridge.png" className="md:h-fit h-32 mx-auto" alt="Connections"/>
@@ -101,7 +104,7 @@ const EclaEcosystem = () => {
                 <span className="md:w-6/12 w-full">
                     <h1 className="text-xl font-semibold ecosysTitles">ECLA Staking</h1>
                     <p className="text-xs text-gray-700 mt-5">The E-commerce industry is controlled by big players like Amazon, eBay, Shopify. Despite the size of the industry, and the volume of transactions done daily, certain challenges have limited its further growth. One of them is high transactions for goods purchased by consumers.</p>
-                    <button className="connect_btn px-8 py-2 mt-7 text-white">Read Whitepaper</button>
+                    <button className="connect_btn px-8 py-2 mt-7 text-white">Stake Now</button>
                 </span>
                 <span className="md:w-4/12 w-full md:mt-0 mt-5">
                     <img src="/assets/icons/eclaStack.png" className="md:h-fit h-32 mx-auto" alt="Connections"/>

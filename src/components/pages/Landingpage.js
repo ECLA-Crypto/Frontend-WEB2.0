@@ -71,7 +71,7 @@ const Landingpage = () => {
                     <p className="mt-3 text-gray-300 text-xs">Swap, earn, and build on the leading decentralized <br/> crypto trading protocol.</p>
                     <span className="flex sm:gap-10 gap-4 items-center mt-6 text-white text-sm flex-wrap">
                         <Link to='/swap' className="py-2.5 px-7 trade">Trade</Link>
-                        <a href="https://discord.gg/NH3QBa4p" rel="noreferrer" target="_blank" className="py-2.5 px-7 border border-white rounded-full">Join Our Community</a>
+                        <a href="https://linktr.ee/eclaecosystem" rel="noreferrer" target="_blank" className="py-2.5 px-7 border border-white rounded-full">Join Our Community</a>
                     </span>
                 </span>
                 <span className="w-1/2 sm:flex hidden justify-end">

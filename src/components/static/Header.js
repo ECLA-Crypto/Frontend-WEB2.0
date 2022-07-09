@@ -107,7 +107,7 @@ const Header = () => {
                         </Menu.Items>
                     </Transition>
                 </Menu> */}
-                <Menu as="div" className="text-left">
+                {/* <Menu as="div" className="text-left">
                     <div>
                         <Menu.Button className="inline-flex justify-center items-center w-full rounded-md  shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Network <span><img src="/assets/icons/downchevron.svg" className=" ml-2" alt="downarrow"/></span></Menu.Button>
                     </div>
@@ -163,7 +163,7 @@ const Header = () => {
                             </div>
                         </Menu.Items>
                     </Transition>
-                </Menu>
+                </Menu> */}
                 <Menu as="div" className="text-left">
                 <div>
                     <Menu.Button className="inline-flex justify-center items-center w-full rounded-md  shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Ecosystem <span><img src="/assets/icons/downchevron.svg" className=" ml-2" alt="downarrow"/></span></Menu.Button>
@@ -172,7 +172,7 @@ const Header = () => {
                     <Menu.Items className="origin-top-left absolute focus:outline-none flex ecosys_dropdown justify-between py-5 mt-2 flex-wrap px-5 z-40">
                         <div className="py-1">
                             <Menu.Item>
-                                <Link to='/eclaecosystem' className='text-gray-300 block py-2 text-sm font-medium'>Getting Started</Link>
+                                <Link to='/' className='text-gray-300 block py-2 text-sm font-medium'>Getting Started</Link>
                             </Menu.Item>
                             <Menu.Item>
                                 <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Swap</Link>
@@ -187,7 +187,7 @@ const Header = () => {
                                 <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Bridge</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Stake</Link>
+                                <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Stake ECLA</Link>
                             </Menu.Item>
                         </div>
                     </Menu.Items>
@@ -206,19 +206,19 @@ const Header = () => {
                                 <Menu.Item>
                                     <hr className="border-gray-400 py-3"/>
                                 </Menu.Item>
-                                <Menu.Item>
+                                {/* <Menu.Item>
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Home</Link>
-                                </Menu.Item>
+                                </Menu.Item> */}
                                 <Menu.Item>
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Events</Link>
                                 </Menu.Item>
-                                <Menu.Item>
+                                {/* <Menu.Item>
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Breakpoint</Link>
-                                </Menu.Item>
+                                </Menu.Item> */}
                                 <Menu.Item>
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Branding</Link>
                                 </Menu.Item>
-                                <Menu.Item>
+                                {/* <Menu.Item>
                                     <h4 className='text-gray-400 block text-lg font-semibold pt-8 pb-2 text-sm capitalize'>Collective</h4>
                                 </Menu.Item>
                                 <Menu.Item>
@@ -226,7 +226,7 @@ const Header = () => {
                                 </Menu.Item>
                                 <Menu.Item>
                                     <Link to='' className='text-gray-300 block text-sm font-medium'>Join the collective</Link>
-                                </Menu.Item>
+                                </Menu.Item> */}
                             </div>
                             <div className="py-1 w-1/4">
                                 <Menu.Item>
@@ -442,7 +442,7 @@ const Header = () => {
                         <Menu.Items className="w-ful focus:outline-none flex justify-between flex-wrap px-5 z-40">
                             <div className="py-1 w-full">
                             <Menu.Item>
-                                <Link to='/eclaecosystem' className='text-gray-300 block py-2 text-sm font-medium'>Getting Started</Link>
+                                <Link to='/' className='text-gray-300 block py-2 text-sm font-medium'>Getting Started</Link>
                             </Menu.Item>
                             <Menu.Item>
                                 <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Swap</Link>
@@ -457,7 +457,7 @@ const Header = () => {
                                 <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Bridge</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Stake</Link>
+                                <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Stake ECLA</Link>
                             </Menu.Item>
                             </div>
                         </Menu.Items>
@@ -476,26 +476,14 @@ const Header = () => {
                                 <Menu.Item>
                                     <hr className="border-gray-400 py-3"/>
                                 </Menu.Item>
-                                <Menu.Item>
+                                {/* <Menu.Item>
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Home</Link>
-                                </Menu.Item>
+                                </Menu.Item> */}
                                 <Menu.Item>
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Events</Link>
                                 </Menu.Item>
                                 <Menu.Item>
-                                    <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Breakpoint</Link>
-                                </Menu.Item>
-                                <Menu.Item>
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Branding</Link>
-                                </Menu.Item>
-                                <Menu.Item>
-                                    <h4 className='text-gray-400 block text-lg font-semibold pt-8 pb-2 text-sm capitalize'>Collective</h4>
-                                </Menu.Item>
-                                <Menu.Item>
-                                    <hr className="border-gray-400 py-3"/>
-                                </Menu.Item>
-                                <Menu.Item>
-                                    <Link to='' className='text-gray-300 block text-sm font-medium'>Join the collective</Link>
                                 </Menu.Item>
                             </div>
                             <div className="py-1 w-full">

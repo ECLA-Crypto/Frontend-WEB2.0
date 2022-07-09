@@ -13,10 +13,9 @@ const MarketPlace = () => {
             <div className="h-full flex py-20 flex justify-between items-center">
                 <span className="text-white w-11/12 sm:w-1/2">
                     <h1 className="sm:text-3xl text-3xl lg:text-5xl font-semibold">Discover, collect, <br/> extraordinary NFT <br/> for real people</h1>
-                    <p className="mt-7 text-xs sm:text-xs">In aenean posuere lorem risus nec. Tempor <br/> tincidunt aenean purus purus vestibulum nibh <br/>   mi venenatis</p>
                     <span className="flex gap-5 mt-7">
                         <button className="connect_btn px-10 py-2.5 text-white text-sm">Explore</button>
-                        <button className="trade px-7 py-2.5 text-white text-sm">Create</button>
+                        <button className="trade px-7 py-2.5 text-white text-sm">Create NFT</button>
                     </span>
                 </span>
                 <span className="w-5/12 lg:w-1/2 xl:w-1/3 hidden sm:block hero_card p-7 rounded-lg border border-purple-500">
@@ -26,7 +25,7 @@ const MarketPlace = () => {
                             <span className="rounded-full w-10 h-10 bg-gray-400">d</span>  
                             <span className="text-white ml-2">
                                 <h5 className="font-medium text-sm">Lagbaja</h5>
-                                <p className="text-xs">0.21ecla</p>
+                                <p className="text-xs">0.21 ECLA</p>
                             </span>
                         </span>
                         <span className="text-white"> 
@@ -48,7 +47,7 @@ const MarketPlace = () => {
                         <div className="bg-gray-500 rounded-lg h-52"></div>
                         <span className="flex justify-between mt-5 items-center text-white">
                             <strong className="text-xs">Lorem Ipsum</strong>
-                            <strong className="text-xs">1.20 echo</strong>
+                            <strong className="text-xs">1.20 ECLA</strong>
                         </span>
                         <hr className="my-2"/>
                         <span className="flex justify-between mt-3 items-center text-white">
@@ -60,7 +59,7 @@ const MarketPlace = () => {
                         <div className="bg-gray-500 rounded-lg h-52"></div>
                         <span className="flex justify-between mt-5 items-center text-white">
                             <strong className="text-xs">Dolor sit amet</strong>
-                            <strong className="text-xs">0.21 ecla</strong>
+                            <strong className="text-xs">0.21 ECLA</strong>
                         </span>
                         <hr className="my-2"/>
                         <span className="flex justify-between mt-3 items-center text-white">
@@ -72,7 +71,7 @@ const MarketPlace = () => {
                         <div className="bg-gray-500 rounded-lg h-52"></div>
                         <span className="flex justify-between mt-5 items-center text-white">
                             <strong className="text-xs">Dignissim curabitu..</strong>
-                            <strong className="text-xs">0.01 ecla</strong>
+                            <strong className="text-xs">0.01 ECLA</strong>
                         </span>
                         <hr className="my-2"/>
                         <span className="flex justify-between mt-3 items-center text-white">
@@ -84,7 +83,7 @@ const MarketPlace = () => {
                         <div className="bg-gray-500 rounded-lg h-52"></div>
                         <span className="flex justify-between mt-5 items-center text-white">
                             <strong className="text-xs">Amet pellentesq..</strong>
-                            <strong className="text-xs">0.55 echo</strong>
+                            <strong className="text-xs">0.55 ECLA</strong>
                         </span>
                         <hr className="my-2"/>
                         <span className="flex justify-between mt-3 items-center text-white">
@@ -95,32 +94,32 @@ const MarketPlace = () => {
                 </div>
                 <div className="flex flex-col items-center justify-center gap-10 mt-32 text-white">
                     <h2 className="font-semibold text-3xl">Getting Started</h2>
-                    <p className="sm:text-sm text-xs mt-2 text-center">Eu, molestie commodo, enim pellentesque turpis integer sagittis</p>
+                    <p className="sm:text-sm text-xs mt-0 text-center">Begin your NFT Journey in 4 easy steps</p>
                     <div className="py-10 w-11/12 flex flex-wrap justify-between items-center">
                         <div className="get_started py-3 h-32 w-8/12 absolute"></div>
                         <div className="flex sm:w-2/5 md:w-fit mt-5 flex-col items-center">
                             <div className="px-5 py-5 bg-gray-500 w-fit rounded-lg border border-gray-500 get_started_card">
                                 <img src="/assets/verify.png" className="h-7" alt="verified"/>
                             </div>
-                            <small className="text-xs mt-3 text-center">Connect your wallet</small>
+                            <small className="w-36 mt-3 text-center">Connect your wallet</small>
                         </div>
                         <div className="flex sm:w-2/5 md:w-fit mt-5 flex-col items-center">
                             <div className="px-5 py-5 bg-gray-100 rounded-lg w-fit border border-gray-100 get_started_card">
                                 <img src="/assets/archive.png" className="h-7" alt="verified"/>
                             </div>
-                            <small className="text-xs mt-3 text-center">Posuere urna, sit amet <br/> molestie leo</small>
+                            <small className="w-36 mt-3 text-center">Explore</small>
                         </div>
                         <div className="flex sm:w-2/5 md:w-fit mt-5 flex-col items-center">
                             <div className="px-5 py-5 bg-gray-100 rounded-lg w-fit border border-gray-100 get_started_card">
                                 <img src="/assets/mail.png" className="h-7" alt="verified"/>
                             </div>
-                            <small className="text-xs mt-3 text-center">Semper pretium <br/> libero sed quam <br/> ac integer ut</small>
+                            <small className="w-36 mt-3 text-center">Upload Your NFT</small>
                         </div>
                         <div className="flex sm:w-2/5 md:w-fit mt-5 flex-col items-center">
                             <div className="px-5 py-5 bg-gray-100 rounded-lg w-fit border border-gray-100 get_started_card">
                                 <img src="/assets/Union.png" className="h-7" alt="verified"/>
                             </div>
-                            <small className="text-xs mt-3 text-center">Lectus volutpat <br/> magna vitae in arcu</small>
+                            <small className="w-36 mt-3 text-center">Good To Go</small>
                         </div>
                     </div>
                     <div className="w-10/12 xl:w-10/12 lg:w-full mt-5">
@@ -154,7 +153,7 @@ const MarketPlace = () => {
                         <div className="bg-gray-500 rounded-lg h-52"></div>
                         <span className="flex justify-between mt-5 items-center text-white">
                             <strong className="text-xs">Lorem Ipsum</strong>
-                            <strong className="text-xs">1.20 echo</strong>
+                            <strong className="text-xs">1.20 ECLA</strong>
                         </span>
                         <hr className="my-2"/>
                         <span className="flex justify-between mt-3 items-center text-white">
@@ -166,7 +165,7 @@ const MarketPlace = () => {
                             <div className="bg-gray-500 rounded-lg h-52"></div>
                             <span className="flex justify-between mt-5 items-center text-white">
                                 <strong className="text-xs">Dolor sit amet</strong>
-                                <strong className="text-xs">0.21 ecla</strong>
+                                <strong className="text-xs">0.21 ECLA</strong>
                             </span>
                             <hr className="my-2"/>
                             <span className="flex justify-between mt-3 items-center text-white">
@@ -178,7 +177,7 @@ const MarketPlace = () => {
                             <div className="bg-gray-500 rounded-lg h-52"></div>
                             <span className="flex justify-between mt-5 items-center text-white">
                                 <strong className="text-xs">Dignissim curabitu..</strong>
-                                <strong className="text-xs">0.01 ecla</strong>
+                                <strong className="text-xs">0.01 ECLA</strong>
                             </span>
                             <hr className="my-2"/>
                             <span className="flex justify-between mt-3 items-center text-white">
@@ -190,7 +189,7 @@ const MarketPlace = () => {
                             <div className="bg-gray-500 rounded-lg h-52"></div>
                             <span className="flex justify-between mt-5 items-center text-white">
                                 <strong className="text-xs">Amet pellentesq..</strong>
-                                <strong className="text-xs">0.55 echo</strong>
+                                <strong className="text-xs">0.55 ECLA</strong>
                             </span>
                             <hr className="my-2"/>
                             <span className="flex justify-between mt-3 items-center text-white">
@@ -202,7 +201,7 @@ const MarketPlace = () => {
                             <div className="bg-gray-500 rounded-lg h-52"></div>
                             <span className="flex justify-between mt-5 items-center text-white">
                                 <strong className="text-xs">Lorem Ipsum</strong>
-                                <strong className="text-xs">1.20 echo</strong>
+                                <strong className="text-xs">1.20 ECLA</strong>
                             </span>
                             <hr className="my-2"/>
                             <span className="flex justify-between mt-3 items-center text-white">
@@ -214,7 +213,7 @@ const MarketPlace = () => {
                             <div className="bg-gray-500 rounded-lg h-52"></div>
                             <span className="flex justify-between mt-5 items-center text-white">
                                 <strong className="text-xs">Dolor sit amet</strong>
-                                <strong className="text-xs">0.21 ecla</strong>
+                                <strong className="text-xs">0.21 ECLA</strong>
                             </span>
                             <hr className="my-2"/>
                             <span className="flex justify-between mt-3 items-center text-white">
@@ -226,7 +225,7 @@ const MarketPlace = () => {
                             <div className="bg-gray-500 rounded-lg h-52"></div>
                             <span className="flex justify-between mt-5 items-center text-white">
                                 <strong className="text-xs">Dignissim curabitu..</strong>
-                                <strong className="text-xs">0.01 ecla</strong>
+                                <strong className="text-xs">0.01 ECLA</strong>
                             </span>
                             <hr className="my-2"/>
                             <span className="flex justify-between mt-3 items-center text-white">
@@ -238,7 +237,7 @@ const MarketPlace = () => {
                             <div className="bg-gray-500 rounded-lg h-52"></div>
                             <span className="flex justify-between mt-5 items-center text-white">
                                 <strong className="text-xs">Amet pellentesq..</strong>
-                                <strong className="text-xs">0.55 echo</strong>
+                                <strong className="text-xs">0.55 ECLA</strong>
                             </span>
                             <hr className="my-2"/>
                             <span className="flex justify-between mt-3 items-center text-white">
@@ -259,7 +258,7 @@ const MarketPlace = () => {
                         <img src="/assets/logos/eclaRingLogo.svg" className="h-40" alt="BBE Logo" />
                         <img src="/assets/logos/eclacommunity.svg" className="sm:h-7 lg:h-10 h-8" alt="ECLA Community Logo"/>
                     </div>
-                    <button className="lg:py-2.5 lg:px-7 text-sm mt-2 md:mb-0 mb-5 py-2 px-3 border border-white rounded-full text-white font-semibold">Become a member</button>
+                    <a href='https://linktr.ee/eclaecosystem' target="_blank" className="lg:py-2.5 lg:px-7 text-sm mt-2 md:mb-0 mb-5 py-2 px-3 border border-white rounded-full text-white font-semibold">Become a member</a>
                 </div>
             </div>
         </div>

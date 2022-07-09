@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Eclablockchain from './components/pages/Eclablockchain';
+// import Eclablockchain from './components/pages/Eclablockchain';
 import EclaEcosystem from './components/pages/EclaEcosystem';
 import EclaReality from './components/pages/EclaReality';
 import Landingpage from './components/pages/Landingpage';
@@ -9,6 +9,7 @@ import Swappage from './components/pages/Swappage';
 import {createStore} from "redux"
 import coinReducer from './store/Store';
 import {Provider} from "react-redux";
+import EclaBuy from './components/pages/EclaBuy';
 const coinStore = createStore(coinReducer)
 function App() {
   return (
@@ -16,10 +17,11 @@ function App() {
       <Routes>
         <Route path='/swap' element={<Provider store={coinStore}><Swappage/></Provider>}></Route>
         <Route path='/swaplanding' element={<Landingpage/>}></Route>
-        <Route path='/' element={<Eclablockchain/>}></Route>
+        {/* <Route path='/' element={<Eclablockchain/>}></Route> */}
         <Route path='/eclareality' element={<EclaReality/>}></Route>
         <Route path='/eclamarket' element={<MarketPlace/>}></Route>
-        <Route path='/eclaecosystem' element={<EclaEcosystem/>}></Route>
+        <Route path='/' element={<EclaEcosystem/>}></Route>
+        <Route path='/buyecla' element={<EclaBuy/>}></Route>
       </Routes>
    </BrowserRouter>
   );

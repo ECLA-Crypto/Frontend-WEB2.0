@@ -1,6 +1,6 @@
-import { useState, Fragment } from "react";
-import { Link } from "react-router-dom"
-import { Menu, Transition } from '@headlessui/react'
+    import { useState, Fragment } from "react";
+    import { Link } from "react-router-dom"
+    import { Menu, Transition } from '@headlessui/react'
 const EcosystemNav = () => {
     const [toggle, setToggle] = useState(false)
     const menubarOn = () => {
@@ -18,7 +18,7 @@ const EcosystemNav = () => {
         </div>
         <ul className="lg:flex hidden items-center gap-3">
             {/* Developer */}
-            <Menu as="div" className="text-left">
+            {/* <Menu as="div" className="text-left">
                 <div>
                     <Menu.Button className="inline-flex justify-center items-center w-full rounded-md  shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Developer <span><img src="/assets/icons/downchevron.svg" className=" ml-2" alt="downarrow"/></span></Menu.Button>
                 </div>
@@ -37,7 +37,7 @@ const EcosystemNav = () => {
                         </div>
                     </Menu.Items>
                 </Transition>
-            </Menu>
+            </Menu> */}
             {/* Ecosystem */}
             <Menu as="div" className="text-left">
                 <div>
@@ -59,7 +59,28 @@ const EcosystemNav = () => {
                                 <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Bridge</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Stake</Link>
+                                <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Stake ECLA</Link>
+                            </Menu.Item>
+                        </div>
+                    </Menu.Items>
+                </Transition>
+            </Menu>
+            {/* Learn */}
+            <Menu as="div" className="text-left">
+                <div>
+                    <Menu.Button className="inline-flex justify-center items-center w-full rounded-md  shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Learn <span><img src="/assets/icons/downchevron.svg" className=" ml-2" alt="downarrow"/></span></Menu.Button>
+                </div>
+                <Transition as={Fragment} enter="transition ease-out duration-100" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-75" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
+                    <Menu.Items className="origin-top-left absolute focus:outline-none flex ecosys_dropdown justify-between py-5 mt-2 flex-wrap px-5 z-40">
+                        <div className="py-1">
+                            <Menu.Item>
+                                <button onClick={()=> window.open("/assets/pdf/whitepaper.pdf","_blank")} className='text-gray-300 block py-2 text-sm font-medium'>Whitepaper</button>
+                            </Menu.Item>
+                            <Menu.Item>
+                                <Link to='/eclamarket' className='text-gray-300 block py-2 text-sm font-medium'>Roadmap</Link>
+                            </Menu.Item>
+                            <Menu.Item>
+                                <Link to='/eclareality' className='text-gray-300 block py-2 text-sm font-medium'>Documentation</Link>
                             </Menu.Item>
                         </div>
                     </Menu.Items>
@@ -79,9 +100,9 @@ const EcosystemNav = () => {
                                 <Menu.Item>
                                     <hr className="border-gray-400 py-3"/>
                                 </Menu.Item>
-                                <Menu.Item>
+                                {/* <Menu.Item>
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Home</Link>
-                                </Menu.Item>
+                                </Menu.Item> */}
                                 <Menu.Item>
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Events</Link>
                                 </Menu.Item>
@@ -91,7 +112,7 @@ const EcosystemNav = () => {
                                 <Menu.Item>
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Branding</Link>
                                 </Menu.Item>
-                                <Menu.Item>
+                                {/* <Menu.Item>
                                     <h4 className='text-gray-400 block text-lg font-semibold pt-8 pb-2 text-sm capitalize'>Collective</h4>
                                 </Menu.Item>
                                 <Menu.Item>
@@ -99,7 +120,7 @@ const EcosystemNav = () => {
                                 </Menu.Item>
                                 <Menu.Item>
                                     <Link to='' className='text-gray-300 block text-sm font-medium'>Join the collective</Link>
-                                </Menu.Item>
+                                </Menu.Item> */}
                             </div>
                             <div className="py-1 w-1/4">
                                 <Menu.Item>
@@ -147,14 +168,14 @@ const EcosystemNav = () => {
             {/* Buy Button */}
             <Menu as="div" className="text-left">
                 <div>
-                    <Link to='/swap' className="inline-flex justify-center items-center w-full rounded-md connect_btn rounded-full shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Buy ECLA</Link>
+                    <Link to='/buyecla' className="inline-flex justify-center items-center w-full rounded-md connect_btn rounded-full shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Buy ECLA</Link>
                 </div>
             </Menu>
         </ul>
         {toggle?
         <div className="w-full h-screen fixed top-0 left-0 flex lg:hidden z-40">
             <ul className="h-full w-9/12 py-20 bg-gray-900 bg-opacity-90 z-40 flex flex-col gap-3 overflow-y-auto">
-                <Menu as="div" className="text-left">
+                {/* <Menu as="div" className="text-left">
                     <div>
                         <Menu.Button className="inline-flex justify-start items-center w-full rounded-md  shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Developer <span><img src="/assets/icons/downchevron.svg" className=" ml-2" alt="downarrow"/></span></Menu.Button>
                     </div>
@@ -173,7 +194,7 @@ const EcosystemNav = () => {
                             </div>
                         </Menu.Items>
                     </Transition>
-                </Menu>
+                </Menu> */}
                 <Menu as="div" className="text-left">
                     <div>
                         <Menu.Button className="inline-flex justify-start items-center w-full rounded-md  shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Ecosystem <span><img src="/assets/icons/downchevron.svg" className=" ml-2" alt="downarrow"/></span></Menu.Button>
@@ -194,7 +215,27 @@ const EcosystemNav = () => {
                                 <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Bridge</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Stake</Link>
+                                <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Stake ECLA</Link>
+                            </Menu.Item>
+                            </div>
+                        </Menu.Items>
+                    </Transition>
+                </Menu>
+                <Menu as="div" className="text-left">
+                    <div>
+                        <Menu.Button className="inline-flex justify-start items-center w-full rounded-md  shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Learn <span><img src="/assets/icons/downchevron.svg" className=" ml-2" alt="downarrow"/></span></Menu.Button>
+                    </div>
+                    <Transition as={Fragment} enter="transition ease-out duration-100" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-75" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
+                        <Menu.Items className="w-ful focus:outline-none flex justify-between flex-wrap px-5 z-40">
+                            <div className="py-1 w-full">
+                            <Menu.Item>
+                                <button onClick={()=> window.open("/assets/pdf/whitepaper.pdf","_blank")} className='text-gray-300 block py-2 text-sm font-medium'>Whitepaper</button>
+                            </Menu.Item>
+                            <Menu.Item>
+                                <Link to='/eclamarket' className='text-gray-300 block py-2 text-sm font-medium'>Roadmap</Link>
+                            </Menu.Item>
+                            <Menu.Item>
+                                <Link to='/eclareality' className='text-gray-300 block py-2 text-sm font-medium'>Documentation</Link>
                             </Menu.Item>
                             </div>
                         </Menu.Items>
@@ -213,9 +254,9 @@ const EcosystemNav = () => {
                                 <Menu.Item>
                                     <hr className="border-gray-400 py-3"/>
                                 </Menu.Item>
-                                <Menu.Item>
+                                {/* <Menu.Item>
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Home</Link>
-                                </Menu.Item>
+                                </Menu.Item> */}
                                 <Menu.Item>
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Events</Link>
                                 </Menu.Item>
@@ -225,7 +266,7 @@ const EcosystemNav = () => {
                                 <Menu.Item>
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Branding</Link>
                                 </Menu.Item>
-                                <Menu.Item>
+                                {/* <Menu.Item>
                                     <h4 className='text-gray-400 block text-lg font-semibold pt-8 pb-2 text-sm capitalize'>Collective</h4>
                                 </Menu.Item>
                                 <Menu.Item>
@@ -233,7 +274,7 @@ const EcosystemNav = () => {
                                 </Menu.Item>
                                 <Menu.Item>
                                     <Link to='' className='text-gray-300 block text-sm font-medium'>Join the collective</Link>
-                                </Menu.Item>
+                                </Menu.Item> */}
                             </div>
                             <div className="py-1 w-full">
                                 <Menu.Item>
@@ -280,7 +321,7 @@ const EcosystemNav = () => {
                 </Menu>
                 {/* Buy Button */}
                 <li>
-                    <Link to='/swap' className="inline-flex justify-center items-center ml-3 rounded-md connect_btn rounded-full shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Buy ECLA</Link>
+                    <Link to='/buyecla' className="inline-flex justify-center items-center ml-3 rounded-md connect_btn rounded-full shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Buy ECLA</Link>
                 </li>
             </ul>
             <button className="h-screen w-3/12 flex py-10" onClick={menubarOff}>

@@ -140,6 +140,11 @@ code {
   filter: blur(10px);
   background: linear-gradient(295.85deg, #0C66F1 10.34%, #3FACFC 93.54%);
 }
+.blur_bg_eco {
+  position: absolute;
+  filter: blur(60px);
+  background: linear-gradient(295.85deg, #0C66F1 10.34%, #3FACFC 93.54%);
+}
 .spiral_bg {
   background-repeat: no-repeat!important;
   background-size: 300vh!important;
@@ -195,6 +200,9 @@ code {
 }
 .dropdown_content {
   background: rgb(27, 28, 71);
+  width: 100vw!important;
+}
+.dropdown_content_light {
   width: 100vw!important;
 }
 .ecosys_dropdown {
