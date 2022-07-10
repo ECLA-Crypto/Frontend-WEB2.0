@@ -156,10 +156,10 @@ const RealityNav = () => {
                                 <button onClick={()=> window.open("/assets/pdf/whitepaper.pdf","_blank")} className='text-gray-900 block py-2 text-sm font-medium'>Whitepaper</button>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to='/eclamarket' className='text-gray-900 block py-2 text-sm font-medium'>Roadmap</Link>
+                                <Link to='' className='text-gray-900 block py-2 text-sm font-medium'>Roadmap</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to='/eclareality' className='text-gray-900 block py-2 text-sm font-medium'>Documentation</Link>
+                                <Link to='' className='text-gray-900 block py-2 text-sm font-medium'>Documentation</Link>
                             </Menu.Item>
                         </div>
                     </Menu.Items>
@@ -296,6 +296,7 @@ const RealityNav = () => {
                         </Menu.Items>
                     </Transition>
                 </Menu>
+                {/* learn */}
                 <Menu as="div" className="text-left">
                     <div>
                         <Menu.Button className="inline-flex justify-start items-center w-full rounded-md  shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Learn <span><img src="/assets/icons/downchevron.svg" className=" ml-2" alt="downarrow"/></span></Menu.Button>
@@ -307,10 +308,10 @@ const RealityNav = () => {
                                     <button onClick={()=> window.open("/assets/pdf/whitepaper.pdf","_blank")} className='text-gray-300 block py-2 text-sm font-medium'>Whitepaper</button>
                                 </Menu.Item>
                                 <Menu.Item>
-                                    <Link to='/eclamarket' className='text-gray-300 block py-2 text-sm font-medium'>Roadmap</Link>
+                                    <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Roadmap</Link>
                                 </Menu.Item>
                                 <Menu.Item>
-                                    <Link to='/eclareality' className='text-gray-300 block py-2 text-sm font-medium'>Documentation</Link>
+                                    <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Documentation</Link>
                                 </Menu.Item>
                             </div>
                         </Menu.Items>

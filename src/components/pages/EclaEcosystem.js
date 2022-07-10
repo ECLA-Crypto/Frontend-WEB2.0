@@ -1,9 +1,11 @@
+import { useState } from "react"
 import Helmet from "react-helmet"
 import { Link } from "react-router-dom"
 import DarkFooter from "../static/DarkFooter"
 import EcosystemNav from "../static/EcosystemNav"
 
 const EclaEcosystem = () => {
+  const [sidenav, setSidenav] = useState('Intro')
   return (
     <>
         <div className="bg-white">
@@ -25,16 +27,18 @@ const EclaEcosystem = () => {
               </div>
           </div>
           <div className="mt-10 w-10/12 flex md:flex-row flex-col gap-10 py-10 mx-auto pt-20">
-            <span className="md:w-3/12 flex md:flex-col overflow-x-auto w-full flex-row md:py-5 py-3 md:px-3 gap-5">
-              <p className="whitespace-nowrap font-semibold md:whitespace-normal text-blue-500">Introduction</p>
-              <Link to='' className="text-gray-600 text-sm whitespace-nowrap md:whitespace-normal">NFT Marketplace</Link>
-              <Link to='' className="text-gray-600 text-sm whitespace-nowrap md:whitespace-normal">Ecla Reality</Link>
-              <Link to='' className="text-gray-600 text-sm whitespace-nowrap md:whitespace-normal">ECLA Wallet</Link>
-              <Link to='' className="text-gray-600 text-sm whitespace-nowrap md:whitespace-normal">ECLA Bridge</Link>
-              <Link to='' className="text-gray-600 text-sm whitespace-nowrap md:whitespace-normal">ECLA Staking</Link>
-            </span>
+            <div className="md:w-3/12 sticky top-0 bg-white">
+              <span className="flex md:flex-col overflow-x-auto w-full sticky top-0 flex-row md:py-5 py-3 md:px-3 gap-5">
+                <a href="#Intro" onClick={()=>setSidenav('Intro')} className={`${sidenav==='Intro'?'text-blue-500 font-semibold': 'text-gray-600'} whitespace-nowrap md:whitespace-normal text-left`}>Introduction</a>
+                <a href="#Nft" onClick={()=>setSidenav('Nft')} className={`${sidenav==='Nft'?'text-blue-500 font-semibold': 'text-gray-600'} whitespace-nowrap md:whitespace-normal text-left`}>NFT Marketplace</a>
+                <a href="#Reality" onClick={()=>setSidenav('Reality')} className={`${sidenav==='Reality'?'text-blue-500 font-semibold': 'text-gray-600'} whitespace-nowrap md:whitespace-normal text-left`}>Ecla Reality</a>
+                <a href="#Wallet" onClick={()=>setSidenav('Wallet')} className={`${sidenav==='Wallet'?'text-blue-500 font-semibold': 'text-gray-600'} whitespace-nowrap md:whitespace-normal text-left`}>ECLA Wallet</a>
+                <a href="#Bridge" onClick={()=>setSidenav('Bridge')} className={`${sidenav==='Bridge'?'text-blue-500 font-semibold': 'text-gray-600'} whitespace-nowrap md:whitespace-normal text-left`}>ECLA Bridge</a>
+                <a href="#Staking" onClick={()=>setSidenav('Staking')} className={`${sidenav==='Staking'?'text-blue-500 font-semibold': 'text-gray-600'} whitespace-nowrap md:whitespace-normal text-left`}>ECLA Staking</a>
+              </span>
+            </div>
             <span className="md:w-8/12 w-full">
-              <div className="w-full flex md:flex-row flex-col items-center justify-between">
+              <div className="w-full flex md:flex-row flex-col items-center justify-between" id="Intro">
                 <span className="md:w-6/12 w-full">
                     <h1 className="text-xl font-semibold ecosysTitles">Enhancing the development of different areas in the global economy.</h1>
                     <p className="text-xs text-gray-700 mt-5">The ECLA CHAIN is aimed at building a solid ground for agriculture, real estate and e-commerce; seeing that these are major industries in today’s world; hence our motto is Blockchainecosystem for real people.</p>
@@ -45,7 +49,7 @@ const EclaEcosystem = () => {
                 </span>
               </div>
               <hr className="border-gray-400 mt-10"/>
-              <div className="w-full flex items-center justify-between mt-10 md:flex-row flex-col">
+              <div className="w-full flex items-center justify-between mt-10 md:flex-row flex-col" id="Nft">
                 <span className="md:w-6/12 w-full">
                     <h1 className="text-xl font-semibold ecosysTitles">NFT Marketplace</h1>
                     <p className="text-xs text-gray-700 mt-5">The first of its kind Marketplace for "Family-life themed" NFTs. Users will be able to access, buy, sell and mint NFTs using the $ECLA token deployed on the ECLA CHAIN.</p>
@@ -58,7 +62,7 @@ const EclaEcosystem = () => {
                 </span>
               </div>
               <hr className="border-gray-400 mt-10"/>
-              <div className="w-full flex items-center justify-between mt-10 md:flex-row flex-col">
+              <div className="w-full flex items-center justify-between mt-10 md:flex-row flex-col" id="Reality">
                 <span className="md:w-4/12 w-full md:mt-0 mb-5">
                     <img src="/assets/EcosysImages/bigleaves.png" className="md:h-fit h-32 mx-auto" alt="Leaves"/>
                 </span>
@@ -71,7 +75,7 @@ const EclaEcosystem = () => {
                 </span>
               </div>
               <hr className="border-gray-400 mt-10"/>
-              <div className="w-full flex items-center justify-between mt-10 md:flex-row flex-col">
+              <div className="w-full flex items-center justify-between mt-10 md:flex-row flex-col" id="Wallet">
                 <span className="md:w-6/12 w-full">
                     <h1 className="text-xl font-semibold ecosysTitles">ECLA Wallet</h1>
                     <p className="text-xs text-gray-700 mt-5">A desire to eat healthy combined with the widespread adoption of technology across all domains has resulted in agribusinesses searching for supply chain management software to improve food safety, food quality, and the traceability of the entire farming supply chain.</p>
@@ -89,7 +93,7 @@ const EclaEcosystem = () => {
                 </span>
               </div>
               <hr className="border-gray-400 mt-10"/>
-              <div className="w-full flex items-center justify-between mt-10 md:flex-row flex-col">
+              <div className="w-full flex items-center justify-between mt-10 md:flex-row flex-col" id="Bridge">
                 <span className="md:w-6/12 w-full">
                     <h1 className="text-xl font-semibold ecosysTitles">ECLA Bridge</h1>
                     <p className="text-xs text-gray-700 mt-5">According to the Reportlinker, the US real estate commercial real market is worth over $4.5 trillion, an indication that the industry is well thronged by investors globally. Understandably, the demand for housing both, residential and commercial will continue to rise.</p>
@@ -100,7 +104,7 @@ const EclaEcosystem = () => {
                 </span>
               </div>
               <hr className="border-gray-400 mt-10"/>
-              <div className="w-full flex items-center justify-between mt-10 md:flex-row flex-col">
+              <div className="w-full flex items-center justify-between mt-10 md:flex-row flex-col" id="Staking">
                 <span className="md:w-6/12 w-full">
                     <h1 className="text-xl font-semibold ecosysTitles">ECLA Staking</h1>
                     <p className="text-xs text-gray-700 mt-5">The E-commerce industry is controlled by big players like Amazon, eBay, Shopify. Despite the size of the industry, and the volume of transactions done daily, certain challenges have limited its further growth. One of them is high transactions for goods purchased by consumers.</p>
