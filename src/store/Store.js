@@ -3,6 +3,7 @@ const defaultState = {
     bottomCoin:{},
     graphdata:{},
     fetchTime:{time:1},
+    connectPage: 'swap',
 }
 const coinReducer = (state=defaultState, action ) =>{
     if(action.type === "SET_TOP_COIN"){
@@ -16,6 +17,9 @@ const coinReducer = (state=defaultState, action ) =>{
         return newState;
     } else if(action.type === "SET_FETCH_TIME"){
         let newState = {...state, fetchTime:action.payload}
+        return newState;
+    } else if(action.type === "SET_CONNECTION_PAGE"){
+        let newState = {...state, connectPage:action.payload}
         return newState;
     }
     return state

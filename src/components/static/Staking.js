@@ -31,6 +31,7 @@ const Staking = () => {
         <h1 className="text-3xl font-bold text-gray-200 text-center mt-4">Stake Your ECLA Token</h1>
         <hr className="border-gray-400 mt-5"/>
         <div className="mt-7 w-full flex flex-col">
+            <button className="rounded-lg bg-gray-600 bg-opacity-30 px-3 text-white font-semibold py-2 mx-auto flex gap-4 items-center"><img src='/assets/logos/MetaMaskLogo.svg' className='w-7 h-7' alt='platform logo'/>awdawdjawk...awdaw</button>
             <div className="flex justify-center items-center gap-10 flex-wrap mt-7">
                 <div className="border-2 border-gray-700 bg-gray-600 bg-opacity-20 flex flex-col justify-center items-center py-5 px-3 rounded w-64">
                     <p className="active">Total Staked</p>
@@ -46,7 +47,7 @@ const Staking = () => {
                 </div>
             </div>
             <div className="flex justify-center items-center gap-3 flex-wrap mt-7">
-                <button className="transfer_btn rounded-full px-3 text-white w-32 font-semibold py-2" onClick={handleOpen}>Stake</button>
+                <button className="transfer_btn rounded-full px-3 text-white w-36 font-semibold py-2 flex justify-center gap-4 items-center" onClick={handleOpen}><img src='/assets/icons/eclaStack.png' className='w-5 h-5' alt='Stake logo'/>Stake</button>
                 <button className="transfer_btn rounded-full px-3 text-white w-32 font-semibold py-2">Withdraw</button>
                 <button className="transfer_btn rounded-full px-3 text-white w-32 font-semibold py-2">Claim</button>
             </div>
@@ -65,7 +66,7 @@ const Staking = () => {
             </Typography>
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                 <div className="w-full flex">
-                    <button className="transfer_btn rounded-lg ml-auto px-3 text-white w-32 py-2">Withdraw</button>
+                    <button className="transfer_btn rounded-lg ml-auto px-3 text-white w-32 py-2">Stake</button>
                 </div>
             </Typography>
         </Box>

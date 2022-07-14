@@ -50,7 +50,7 @@ const BuyNav = () => {
                                 <Link to='/' className='text-gray-300 block py-2 text-sm font-medium'>Getting Started</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Swap</Link>
+                                <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA DEx</Link>
                             </Menu.Item>
                             <Menu.Item>
                                 <Link to='/eclamarket' className='text-gray-300 block py-2 text-sm font-medium'>NFT Marketplace</Link>
@@ -210,7 +210,7 @@ const BuyNav = () => {
                                 <Link to='/' className='text-gray-300 block py-2 text-sm font-medium'>Getting Started</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Swap</Link>
+                                <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA DEx</Link>
                             </Menu.Item>
                             <Menu.Item>
                                 <Link to='/eclamarket' className='text-gray-300 block py-2 text-sm font-medium'>NFT Marketplace</Link>

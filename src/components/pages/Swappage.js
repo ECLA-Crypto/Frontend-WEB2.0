@@ -1,4 +1,3 @@
-import { useState } from "react"
 import Helmet from "react-helmet"
 import Footer from "../static/Footer"
 import Header from "../static/Header"
@@ -18,27 +17,27 @@ const Homepage = () => {
   const dispatch = useDispatch();
   const topCoin = useSelector(state=>state.topCoin);
   const bottomCoin = useSelector(state=>state.bottomCoin);
-  const [connectPage, setConnectPage] = useState('swap')
+  const connectPage= useSelector(state=>state.connectPage)
   const time = useSelector(state=>state.fetchTime.time);
   const current = new Date();
   const date = `${current.toLocaleString('en-us', { month: 'short' })} ${current.getDate()}, ${current.getFullYear()}`;
   const times = current.getHours() + ':' + current.getMinutes();
   return (
     <div className="spiral_bg overflow-x-hidden">
-      <div className={`main_bg w-11/12 mx-auto pt-10 ${connectPage==='transfers'|| connectPage==='liquidity' || connectPage==='balance'?'h-screen overflow-y-auto' : connectPage==='staking' ? 'xl:h-screen xl:overflow-y-auto' : ''}`}>
+      <div className={`main_bg w-11/12 mx-auto pt-10 ${connectPage==='transfers'|| connectPage==='liquidity' || connectPage==='balance'?'h-screen overflow-y-auto' : connectPage==='staking' ? 'xl:h-screen xl:overflow-y-hidden' : ''}`}>
         <Helmet>
           <title>ECLA {connectPage}</title>
         </Helmet>
         <Header/>
         <div className="inner_bg rounded flex justify-between text-white text-xs mt-16 mx-auto w-full sm:w-fit gap-2 overflow-x-auto">
-          <button onClick={()=>setConnectPage('swap')} className={`pl-5 pr-3 font-medium py-3 ${connectPage==='swap'? 'active' : null}`}>Swap</button>
+          <button onClick={()=>dispatch({type:"SET_CONNECTION_PAGE", payload:'swap'})} className={`pl-5 pr-3 font-medium py-3 ${connectPage==='swap'? 'active' : null}`}>Swap</button>
           {/* <button onClick={()=>setConnectPage('limit')} className={`px-3 font-medium py-3 ${connectPage==='limit'? 'active' : null}`}>Limit</button> */}
           {/* <button onClick={()=>setConnectPage('liquidity')} className={`px-3 font-medium py-3 ${connectPage==='liquidity' ? 'active' : null}`}>Liquidity</button> */}
-          <button onClick={()=>setConnectPage('wallet')} className={`px-3 font-medium py-3 ${connectPage==='wallet' ? 'active' : null}`}>Wallet</button>
-          <button onClick={()=>setConnectPage('balance')} className={`px-3 font-medium py-3 ${connectPage==='balance' ? 'active' : null}`}>Balance</button>
-          <button onClick={()=>setConnectPage('transfers')} className={`px-3 font-medium py-3 ${connectPage==='transfers' ? 'active' : null}`}>Transfers</button>
-          <button onClick={()=>setConnectPage('nfts')} className={`pl-3 pr-5 font-medium py-3 ${connectPage==='nfts' ? 'active' : null}`}>NFTs</button>
-          <button onClick={()=>setConnectPage('staking')} className={`pl-3 pr-5 font-medium py-3 ${connectPage==='staking' ? 'active' : null}`}>Staking</button>
+          <button onClick={()=>dispatch({type:"SET_CONNECTION_PAGE", payload:'wallet'})} className={`px-3 font-medium py-3 ${connectPage==='wallet' ? 'active' : null}`}>Wallet</button>
+          <button onClick={()=>dispatch({type:"SET_CONNECTION_PAGE", payload:'balance'})} className={`px-3 font-medium py-3 ${connectPage==='balance' ? 'active' : null}`}>Balance</button>
+          <button onClick={()=>dispatch({type:"SET_CONNECTION_PAGE", payload:'transfers'})} className={`px-3 font-medium py-3 ${connectPage==='transfers' ? 'active' : null}`}>Transfers</button>
+          <button onClick={()=>dispatch({type:"SET_CONNECTION_PAGE", payload:'nfts'})} className={`pl-3 pr-5 font-medium py-3 ${connectPage==='nfts' ? 'active' : null}`}>NFTs</button>
+          <button onClick={()=>dispatch({type:"SET_CONNECTION_PAGE", payload:'staking'})} className={`pl-3 pr-5 font-medium py-3 ${connectPage==='staking' ? 'active' : null}`}>Staking</button>
         </div>
         <div className={` ${connectPage!=='wallet'&&connectPage!=='liquidity'?'inner_bg p-5 md:w-11/12 w-full': 'p-0 w-full'} mx-auto lg:w-10/12  mt-10 flex flex-col justify-between rounded`}>
           <div className="flex lg:flex-row flex-col justify-between rounded">

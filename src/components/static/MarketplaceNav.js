@@ -27,7 +27,7 @@ const MarketplaceNav = () => {
                                 <Link to='/' className='text-gray-300 block py-2 text-sm font-medium'>Getting Started</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Dex</Link>
+                                <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA DEx</Link>
                             </Menu.Item>
                             <Menu.Item>
                                 <Link to='/eclamarket' className='text-gray-300 block py-2 text-sm font-medium'>NFT Marketplace</Link>
@@ -39,7 +39,7 @@ const MarketplaceNav = () => {
                                 <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Bridge</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Stake ECLA</Link>
+                                <Link to={{pathname:'/swap', state: {connectPage: 'staking'} }} className='text-gray-300 block py-2 text-sm font-medium flex items-center gap-3'><img src='/assets/icons/eclaStack.png' className='w-5 h-5' alt='Stake logo'/>Stake ECLA</Link>
                             </Menu.Item>
                         </div>
                     </Menu.Items>
@@ -145,7 +145,7 @@ const MarketplaceNav = () => {
                                 <Link to='/' className='text-gray-300 block py-2 text-sm font-medium'>Getting Started</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Dex</Link>
+                                <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA DEx</Link>
                             </Menu.Item>
                             <Menu.Item>
                                 <Link to='/eclamarket' className='text-gray-300 block py-2 text-sm font-medium'>NFT Marketplace</Link>
@@ -157,7 +157,7 @@ const MarketplaceNav = () => {
                                 <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Bridge</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Stake ECLA</Link>
+                                <Link to={{pathname:'/swap', state: {connectPage: 'staking'} }} className='text-gray-300 block py-2 text-sm font-medium flex items-center gap-3'><img src='/assets/icons/eclaStack.png' className='w-5 h-5' alt='Stake logo'/>Stake ECLA</Link>
                             </Menu.Item>
                             </div>
                         </Menu.Items>

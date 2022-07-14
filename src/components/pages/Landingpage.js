@@ -1,5 +1,6 @@
 import Helmet from "react-helmet"
 import { Link } from "react-router-dom"
+import Footer from "../static/Footer"
 import Header from "../static/Header"
 
 const Landingpage = () => {
@@ -7,7 +8,7 @@ const Landingpage = () => {
     <>
     <div className="main_bg w-full mx-auto pt-10 spiral_bg">
         <Helmet>
-          <title>ECLA Landing Page</title>
+          <title>ECLA DEx</title>
         </Helmet>
         <div className="px-5">
             <Header/>
@@ -22,7 +23,7 @@ const Landingpage = () => {
                     </span>
                 </span>
                 <span className="w-1/2 justify-end items-center md:flex hidden">
-                    <img src="/assets/herologo.svg" className="h-72" alt="ECLA Swap"/>
+                    <img src="/assets/herologo.gif" className="h-96" alt="ECLA Swap"/>
                 </span>
             </div>
         </div>
@@ -75,7 +76,7 @@ const Landingpage = () => {
                     </span>
                 </span>
                 <span className="w-1/2 sm:flex hidden justify-end">
-                   <img src="/assets/logos/eclaRingLogo.svg" className="h-72" alt="Ecla Logo" />
+                   <img src="/assets/logos/eclaRingLogo.gif" className="h-80" alt="Ecla Logo" />
                 </span>
             </div>
         </div>
@@ -92,6 +93,7 @@ const Landingpage = () => {
                 </span>
             </div>
         </div>
+        <Footer/>
     </div>
     </>
   )

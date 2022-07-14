@@ -47,7 +47,7 @@ const EcosystemNav = () => {
                     <Menu.Items className="origin-top-left absolute focus:outline-none flex ecosys_dropdown justify-between py-5 mt-2 flex-wrap px-5 z-40">
                         <div className="py-1">
                             <Menu.Item>
-                                <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Dex</Link>
+                                <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA DEx</Link>
                             </Menu.Item>
                             <Menu.Item>
                                 <Link to='/eclamarket' className='text-gray-300 block py-2 text-sm font-medium'>NFT Marketplace</Link>
@@ -59,7 +59,7 @@ const EcosystemNav = () => {
                                 <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Bridge</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Stake ECLA</Link>
+                                <Link to={{pathname:'/swap', state: {connectPage: 'staking'} }} className='text-gray-300 block py-2 text-sm font-medium flex items-center gap-3'><img src='/assets/icons/eclaStack.png' className='w-5 h-5' alt='Stake logo'/>Stake ECLA</Link>
                             </Menu.Item>
                         </div>
                     </Menu.Items>
@@ -204,7 +204,7 @@ const EcosystemNav = () => {
                         <Menu.Items className="w-ful focus:outline-none flex justify-between flex-wrap px-5 z-40">
                             <div className="py-1 w-full">
                             <Menu.Item>
-                                <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Dex</Link>
+                                <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA DEx</Link>
                             </Menu.Item>
                             <Menu.Item>
                                 <Link to='/eclamarket' className='text-gray-300 block py-2 text-sm font-medium'>NFT Marketplace</Link>
@@ -216,7 +216,7 @@ const EcosystemNav = () => {
                                 <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Bridge</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Stake ECLA</Link>
+                                <Link to={{pathname:'/swap', state: {connectPage: 'staking'} }} className='text-gray-300 block py-2 text-sm font-medium flex items-center gap-3'><img src='/assets/icons/eclaStack.png' className='w-5 h-5' alt='Stake logo'/>Stake ECLA</Link>
                             </Menu.Item>
                             </div>
                         </Menu.Items>

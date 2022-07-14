@@ -1,11 +1,18 @@
 import { useState } from "react"
 import Helmet from "react-helmet"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import DarkFooter from "../static/DarkFooter"
 import EcosystemNav from "../static/EcosystemNav"
+import { useDispatch } from 'react-redux'
 
 const EclaEcosystem = () => {
-  const [sidenav, setSidenav] = useState('Intro')
+  const navigate = useNavigate()
+  const [sidenav, setSidenav] = useState('Intro');
+  const dispatch = useDispatch();
+  const stake = () => {
+    dispatch({type:"SET_CONNECTION_PAGE", payload:'staking'})
+    navigate('/swap');
+  } 
   return (
     <>
         <div className="bg-white">
@@ -108,7 +115,7 @@ const EclaEcosystem = () => {
                 <span className="md:w-6/12 w-full">
                     <h1 className="text-xl font-semibold ecosysTitles">ECLA Staking</h1>
                     <p className="text-xs text-gray-700 mt-5">The E-commerce industry is controlled by big players like Amazon, eBay, Shopify. Despite the size of the industry, and the volume of transactions done daily, certain challenges have limited its further growth. One of them is high transactions for goods purchased by consumers.</p>
-                    <button className="connect_btn px-8 py-2 mt-7 text-white">Stake Now</button>
+                    <button onClick={stake} className="connect_btn px-8 py-2 mt-7 text-white flex justify-center items-center gap-3"><img src='/assets/icons/eclaStack.png' className='w-5 h-5' alt='Stake logo'/>Stake Now</button>
                 </span>
                 <span className="md:w-4/12 w-full md:mt-0 mt-5">
                     <img src="/assets/icons/eclaStack.png" className="md:h-fit h-32 mx-auto" alt="Connections"/>
