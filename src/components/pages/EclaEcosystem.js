@@ -1,18 +1,52 @@
-import { useState } from "react"
+import { useEffect,  useState } from "react"
 import Helmet from "react-helmet"
 import { Link, useNavigate } from "react-router-dom"
 import DarkFooter from "../static/DarkFooter"
 import EcosystemNav from "../static/EcosystemNav"
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 const EclaEcosystem = () => {
   const navigate = useNavigate()
   const [sidenav, setSidenav] = useState('Intro');
   const dispatch = useDispatch();
+  const privateSales = useSelector(state=>state.privateSales)
   const stake = () => {
     dispatch({type:"SET_CONNECTION_PAGE", payload:'staking'})
     navigate('/swap');
-  } 
+  }
+  const [timeDays, setTimeDays] = useState(0)
+  const [timeHours, setTimeHours] = useState(0)
+  const [timeMinutes, setTimeMinutes] = useState(0)
+  const [timeSeconds, setTimeSeconds] = useState(0)
+
+  let interval;
+  const startTimer = () => {
+    const countDownDate = new Date("Aug 15, 2022 19:23:30").getTime()
+    interval= setInterval(()=>{
+      const now = new Date().getTime()
+      const distance = countDownDate-now;
+      let days = Math.floor(distance/ (24*60*60*1000));
+      let hours = Math.floor((distance%(24*60*60*1000))/(1000*60*60))
+      let minutes = Math.floor((distance%(60*60*1000))/(1000*60))
+      let seconds = Math.floor((distance%(60*1000))/1000);
+      if (distance<0) {
+        clearInterval(interval.current)
+      } else {
+        if (days<10) {days="0"+days}
+        setTimeDays(days);
+        if (hours<10) {hours="0"+hours}
+        setTimeHours(hours);
+        if (minutes<10) {minutes="0"+minutes}
+        setTimeMinutes(minutes);
+        if (seconds<10) {seconds="0"+seconds}
+        setTimeSeconds(seconds)
+      }
+    })
+  }
+  useEffect(() => {
+    startTimer()
+  }, [startTimer])
+  
   return (
     <>
         <div className="bg-white">
@@ -20,6 +54,17 @@ const EclaEcosystem = () => {
             <title>Ecla Ecosystem</title>
         </Helmet>
           <div className="ecosys_hero h-screen py-10">
+            {privateSales&&(
+              <div className="fixed z-40 top-0 w-full h-screen bg-black/60 flex justify-center items-center flex-col">
+                <div className=" md:w-96 w-72 mx-auto ">
+                  <button className="w-10 h-10 private_bg text-white ml-auto mb-5 flex justify-center items-center font-semibold text-xl rounded-full outline-none" onClick={()=>dispatch({type:"SET_PRIVATE_SALES", payload:false})}>X</button>
+                  <div className="md:w-96 w-full py-5  bg-white rounded flex flex-col private_bg">
+                    <h2 className="text-center text-white tracking-wider font-semibold text-2xl">Private Sales</h2>
+                    {timeDays!==0&&timeHours!==0&&timeMinutes!==0&&timeSeconds!==0? <Link to='/privatesales' className="text-xl private_btn py-2 cursor-pointer rounded w-fit mx-auto text-center font-bold mt-5 text_color px-10">{timeDays} : {timeHours}  : {timeMinutes} : {timeSeconds} </Link> : <button className="mx-auto font-semibold px-5 py-2 private_btn rounded text-gray-100 tracking-wider mt-3 z-40" onClick={()=>dispatch({type:"SET_PRIVATE_SALES", payload:false})}>Private Sales Ended</button> }
+                  </div>
+                </div>
+              </div>
+            )}
               <div className="w-11/12 mx-auto flex flex-col justify-between h-full">
                 <EcosystemNav/>
                 <div className="h-4/6 w-full flex flex-col">

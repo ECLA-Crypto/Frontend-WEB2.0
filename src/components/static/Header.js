@@ -19,7 +19,7 @@ const Header = () => {
     } 
   return (
     <nav className={`flex justify-between`}>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 z-40">
             <Link to='/'>
                 <img src="/assets/logos/swapLogo.svg" alt="ECLA LOGO" />
             </Link>
@@ -280,7 +280,7 @@ const Header = () => {
                 </Menu>
             </ul>
         </div>
-        <div className="flex justify-center items-center lg:flex hidden">
+        <div className="justify-center items-center lg:flex hidden">
             {connected? 
             <div className="flex items-center gap-5">
                 <select id="countries_disabled" class="auth_btn border-0 text-gray-100 text-sm rounded-lg block p-2.5">
@@ -464,7 +464,7 @@ const Header = () => {
                                 <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Bridge</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to={{pathname:'/swap', state: {connectPage: 'staking'} }} className='text-gray-300 block py-2 text-sm font-medium flex items-center gap-3'><img src='/assets/icons/eclaStack.png' className='w-5 h-5' alt='Stake logo'/>Stake ECLA</Link>
+                                <Link to={{pathname:'/swap', state: {connectPage: 'staking'} }} className='text-gray-300 py-2 text-sm font-medium flex items-center gap-3'><img src='/assets/icons/eclaStack.png' className='w-5 h-5' alt='Stake logo'/>Stake ECLA</Link>
                             </Menu.Item>
                             </div>
                         </Menu.Items>

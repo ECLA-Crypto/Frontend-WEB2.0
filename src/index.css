@@ -25,6 +25,12 @@ code {
   background: linear-gradient(295.85deg, #0C66F1 10.34%, #3FACFC 93.54%);
   border-radius: 97px;
 }
+.private_bg{
+  background-color: #171840;
+}
+.private_btn {
+  background: linear-gradient(295.85deg, #0C66F1 10.34%, #3FACFC 93.54%);
+}
 .swap_btn {
   background: linear-gradient(295.85deg, #0C66F1 10.34%, #3FACFC 93.54%);
 }

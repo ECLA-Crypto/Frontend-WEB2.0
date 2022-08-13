@@ -4,6 +4,7 @@ const defaultState = {
     graphdata:{},
     fetchTime:{time:1},
     connectPage: 'swap',
+    privateSales: true,
 }
 const coinReducer = (state=defaultState, action ) =>{
     if(action.type === "SET_TOP_COIN"){
@@ -20,6 +21,9 @@ const coinReducer = (state=defaultState, action ) =>{
         return newState;
     } else if(action.type === "SET_CONNECTION_PAGE"){
         let newState = {...state, connectPage:action.payload}
+        return newState;
+    } else if(action.type === "SET_PRIVATE_SALES"){
+        let newState = {...state, privateSales:action.payload}
         return newState;
     }
     return state

@@ -10,12 +10,14 @@ import {createStore} from "redux"
 import coinReducer from './store/Store';
 import {Provider} from "react-redux";
 import EclaBuy from './components/pages/EclaBuy';
+import PrivateSales from './components/pages/PrivateSales';
 const coinStore = createStore(coinReducer)
 function App() {
   return (
    <BrowserRouter>
       <Routes>
         <Route path='/swap' element={<Provider store={coinStore}><Swappage/></Provider>}></Route>
+        <Route path='/privatesales' element={<Provider store={coinStore}><PrivateSales/></Provider>}></Route>
         <Route path='/swaplanding' element={<Provider store={coinStore}><Landingpage/></Provider>}></Route>
         {/* <Route path='/' element={<Eclablockchain/>}></Route> */}
         <Route path='/eclareality' element={<Provider store={coinStore}><EclaReality/></Provider>}></Route>

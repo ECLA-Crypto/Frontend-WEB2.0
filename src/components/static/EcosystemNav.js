@@ -39,6 +39,7 @@ const EcosystemNav = () => {
                 </Transition>
             </Menu> */}
             {/* Ecosystem */}
+            <Link to='/privatesales' className="font-medium text-sm text-gray-300">Private Sales</Link>
             <Menu as="div" className="text-left">
                 <div>
                     <Menu.Button className="inline-flex justify-center items-center w-full rounded-md  shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Ecosystem <span><img src="/assets/icons/downchevron.svg" className=" ml-2" alt="downarrow"/></span></Menu.Button>
@@ -196,6 +197,7 @@ const EcosystemNav = () => {
                     </Transition>
                 </Menu> */}
                 {/* Ecosystem */}
+                <Link to='/privatesales' className="shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Private Sales</Link>
                 <Menu as="div" className="text-left">
                     <div>
                         <Menu.Button className="inline-flex justify-start items-center w-full rounded-md  shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Ecosystem <span><img src="/assets/icons/downchevron.svg" className=" ml-2" alt="downarrow"/></span></Menu.Button>
