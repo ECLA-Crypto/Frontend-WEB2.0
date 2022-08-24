@@ -1,13 +1,20 @@
-    import { useState, Fragment } from "react";
-    import { Link } from "react-router-dom"
-    import { Menu, Transition } from '@headlessui/react'
+import { useState, Fragment } from "react";
+import { Link, useNavigate } from "react-router-dom"
+import { Menu, Transition } from '@headlessui/react'
+import { useDispatch } from "react-redux";
 const EcosystemNav = () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate()
     const [toggle, setToggle] = useState(false)
     const menubarOn = () => {
         setToggle(true);
     }
     const menubarOff = () => {
         setToggle(false)
+    }
+    const stake = () => {
+        dispatch({type:"SET_CONNECTION_PAGE", payload:'staking'})
+        navigate('/swap');
     }
   return (
     <nav className={`flex justify-between`}>
@@ -51,6 +58,9 @@ const EcosystemNav = () => {
                                 <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA DEx</Link>
                             </Menu.Item>
                             <Menu.Item>
+                                <Link to='/eclacommerce' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Commerce</Link>
+                            </Menu.Item>
+                            <Menu.Item>
                                 <Link to='/eclamarket' className='text-gray-300 block py-2 text-sm font-medium'>NFT Marketplace</Link>
                             </Menu.Item>
                             <Menu.Item>
@@ -60,7 +70,7 @@ const EcosystemNav = () => {
                                 <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Bridge</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to={{pathname:'/swap', state: {connectPage: 'staking'} }} className='text-gray-300 block py-2 text-sm font-medium flex items-center gap-3'><img src='/assets/icons/eclaStack.png' className='w-5 h-5' alt='Stake logo'/>Stake ECLA</Link>
+                                <button onClick={stake} className='outline-none text-gray-300 py-2 text-sm font-medium flex items-center gap-3'><img src='/assets/icons/eclaStack.png' className='w-5 h-5' alt='Stake logo'/>Stake ECLA</button>
                             </Menu.Item>
                         </div>
                     </Menu.Items>
@@ -209,6 +219,9 @@ const EcosystemNav = () => {
                                 <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA DEx</Link>
                             </Menu.Item>
                             <Menu.Item>
+                                <Link to='/eclacommerce' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Commerce</Link>
+                            </Menu.Item>
+                            <Menu.Item>
                                 <Link to='/eclamarket' className='text-gray-300 block py-2 text-sm font-medium'>NFT Marketplace</Link>
                             </Menu.Item>
                             <Menu.Item>
@@ -218,7 +231,7 @@ const EcosystemNav = () => {
                                 <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Bridge</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to={{pathname:'/swap', state: {connectPage: 'staking'} }} className='text-gray-300 block py-2 text-sm font-medium flex items-center gap-3'><img src='/assets/icons/eclaStack.png' className='w-5 h-5' alt='Stake logo'/>Stake ECLA</Link>
+                                <Link to={{pathname:'/swap', state: {connectPage: 'staking'} }} className='text-gray-300 py-2 text-sm font-medium flex items-center gap-3'><img src='/assets/icons/eclaStack.png' className='w-5 h-5' alt='Stake logo'/>Stake ECLA</Link>
                             </Menu.Item>
                             </div>
                         </Menu.Items>
@@ -254,7 +267,7 @@ const EcosystemNav = () => {
                         <Menu.Items className="w-ful focus:outline-none flex justify-between py-5 flex-wrap px-5 mt-2 z-40">
                             <div className="py-1 w-full">
                                 <Menu.Item>
-                                    <h4 className='text-gray-400 block text-lg font-semibold py-2 text-sm capitalize'>Community</h4>
+                                    <h4 className='text-gray-400 block font-semibold py-2 text-sm capitalize'>Community</h4>
                                 </Menu.Item>
                                 <Menu.Item>
                                     <hr className="border-gray-400 py-3"/>
@@ -272,7 +285,7 @@ const EcosystemNav = () => {
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Branding</Link>
                                 </Menu.Item>
                                 {/* <Menu.Item>
-                                    <h4 className='text-gray-400 block text-lg font-semibold pt-8 pb-2 text-sm capitalize'>Collective</h4>
+                                    <h4 className='text-gray-400 block font-semibold pt-8 pb-2 text-sm capitalize'>Collective</h4>
                                 </Menu.Item>
                                 <Menu.Item>
                                     <hr className="border-gray-400 py-3"/>
@@ -283,7 +296,7 @@ const EcosystemNav = () => {
                             </div>
                             <div className="py-1 w-full">
                                 <Menu.Item>
-                                    <h4 className='text-gray-400 block text-lg font-semibold py-2 text-sm capitalize'>Content</h4>
+                                    <h4 className='text-gray-400 block font-semibold py-2 text-sm capitalize'>Content</h4>
                                 </Menu.Item>
                                 <Menu.Item>
                                     <hr className="border-gray-400 py-3"/>
@@ -303,7 +316,7 @@ const EcosystemNav = () => {
                             </div>
                             <div className="py-1 w-full">
                                 <Menu.Item>
-                                    <h4 className='text-gray-400 block text-lg font-semibold py-2 text-sm capitalize'>Socials</h4>
+                                    <h4 className='text-gray-400 block font-semibold py-2 text-sm capitalize'>Socials</h4>
                                 </Menu.Item>
                                 <Menu.Item>
                                     <hr className="border-gray-400 py-3"/>
@@ -326,7 +339,7 @@ const EcosystemNav = () => {
                 </Menu>
                 {/* Buy Button */}
                 <li>
-                    <Link to='/buyecla' className="inline-flex justify-center items-center ml-3 rounded-md connect_btn rounded-full shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Buy ECLA</Link>
+                    <Link to='/buyecla' className="inline-flex justify-center items-center ml-3 connect_btn rounded-full shadow-sm px-4 py-2 text-sm font-medium text-gray-100">Buy ECLA</Link>
                 </li>
             </ul>
             <button className="h-screen w-3/12 flex py-10" onClick={menubarOff}>

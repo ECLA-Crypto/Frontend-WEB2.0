@@ -134,7 +134,7 @@ const EclaEcosystem = () => {
                         <button className="connect_btn px-8 py-2 mt-7 text-white">Swap</button>
                       </Link>
                       <Link to='/buyecla'>
-                        <button className="border-blue-500 font-medium border rounded-full text-blue-500 px-8 py-2 mt-7 text-white">Download Wallet</button>
+                        <button className="border-blue-500 font-medium border rounded-full text-blue-500 px-8 py-2 mt-7">Download Wallet</button>
                       </Link>
                     </div>
                 </span>

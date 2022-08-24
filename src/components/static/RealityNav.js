@@ -1,7 +1,10 @@
 import { useState, Fragment } from "react";
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { Menu, Transition } from '@headlessui/react'
+import { useDispatch } from "react-redux/es/exports";
 const RealityNav = () => {
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
     const [toggle, setToggle] = useState(false)
     const menubarOn = () => {
         setToggle(true);
@@ -9,6 +12,10 @@ const RealityNav = () => {
     const menubarOff = () => {
         setToggle(false)
     }
+    const stake = () => {
+        dispatch({type:"SET_CONNECTION_PAGE", payload:'staking'})
+        navigate('/swap');
+      }
   return (
     <nav className={`flex justify-between`}>
         <div className="flex items-center gap-10">
@@ -53,6 +60,9 @@ const RealityNav = () => {
                                 <Link to='/swaplanding' className='text-gray-900 block py-2 text-sm font-medium'>ECLA Dex</Link>
                             </Menu.Item>
                             <Menu.Item>
+                                <Link to='/eclacommerce' className='text-gray-900 block py-2 text-sm font-medium'>ECLA Commerce</Link>
+                            </Menu.Item>
+                            <Menu.Item>
                                 <Link to='/eclamarket' className='text-gray-900 block py-2 text-sm font-medium'>Market Place</Link>
                             </Menu.Item>
                             <Menu.Item>
@@ -62,7 +72,7 @@ const RealityNav = () => {
                                 <Link to='' className='text-gray-900 block py-2 text-sm font-medium'>ECLA Bridge</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to={{pathname:'/swap', state: {connectPage: 'staking'} }} className='text-gray-900 block py-2 text-sm font-medium flex items-center gap-3'><img src='/assets/icons/eclaStack.png' className='w-5 h-5' alt='Stake logo'/>Stake ECLA</Link>
+                                <button onClick={stake} className='text-gray-900 py-2 text-sm font-medium flex items-center gap-3'><img src='/assets/icons/eclaStack.png' className='w-5 h-5' alt='Stake logo'/>Stake ECLA</button>
                             </Menu.Item>
                         </div>
                     </Menu.Items>
@@ -202,6 +212,9 @@ const RealityNav = () => {
                                 <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA DEx</Link>
                             </Menu.Item>
                             <Menu.Item>
+                                <Link to='/eclacommerce' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Commerce</Link>
+                            </Menu.Item>
+                            <Menu.Item>
                                 <Link to='/eclamarket' className='text-gray-300 block py-2 text-sm font-medium'>Market Place</Link>
                             </Menu.Item>
                             <Menu.Item>
@@ -214,7 +227,7 @@ const RealityNav = () => {
                                 <Link to='/' className='text-gray-300 block py-2 text-sm font-medium'>Ecosystem</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to={{pathname:'/swap', state: {connectPage: 'staking'} }} className='text-gray-300 block py-2 text-sm font-medium flex items-center gap-3'><img src='/assets/icons/eclaStack.png' className='w-5 h-5' alt='Stake logo'/>Stake ECLA</Link>
+                                <button onClick={stake} className='text-gray-300 py-2 text-sm font-medium flex items-center gap-3'><img src='/assets/icons/eclaStack.png' className='w-5 h-5' alt='Stake logo'/>Stake ECLA</button>
                             </Menu.Item>
                             </div>
                         </Menu.Items>
