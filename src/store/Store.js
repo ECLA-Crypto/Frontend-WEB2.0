@@ -8,8 +8,12 @@ const defaultState = {
     heroSection: [],
     investmentTopSection: [],
     investmentPlans: [],
-    agriculture: [],
-    agricproduct:[],
+    agriculture: false,
+    agricproduct:false,
+    real_estate:false,
+    realEstateProduct:false,
+    digitalAccessMarket: false,
+    digitalAccessMarketProduct: false,
 }
 const coinReducer = (state=defaultState, action ) =>{
     if(action.type === "SET_TOP_COIN"){
@@ -44,6 +48,18 @@ const coinReducer = (state=defaultState, action ) =>{
         return newState;
     } else if(action.type === "SET_AGRICULTURE_INVESTMENT"){
         let newState = {...state, agricproduct:action.payload}
+        return newState;
+    } else if(action.type === "SET_REALESTATE_SECTION"){
+        let newState = {...state, real_estate:action.payload}
+        return newState;
+    } else if(action.type === "SET_REAL_ESTATE_INVESTMENT"){
+        let newState = {...state, realEstateProduct:action.payload}
+        return newState;
+    } else if(action.type === "SET_ACCESS_MARKET_SECTION"){
+        let newState = {...state, digitalAccessMarket:action.payload}
+        return newState;
+    } else if(action.type === "SET_DIGITAL_INVESTMENT"){
+        let newState = {...state, digitalAccessMarketProduct:action.payload}
         return newState;
     }
     return state

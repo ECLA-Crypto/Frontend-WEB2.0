@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import { createClient } from "contentful";
 import CommerceNav from "../static/CommerceSection/CommerceNav";
 import { useDispatch, useSelector } from "react-redux";
-
-const AgricultureProduct = () => {
+const RealEstateProduct = () => {
+    const product = useSelector(state=>state.realEstateProduct)
     const dispatch = useDispatch()
     const params = useParams();
     useEffect(() => {
@@ -14,17 +14,16 @@ const AgricultureProduct = () => {
                 accessToken: process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN
             });
             const {items} = await client.getEntries({
-                content_type:'agriculture',
+                content_type:'realEstate',
                 'fields.slug': params.id
             })
-            dispatch({type:"SET_AGRICULTURE_INVESTMENT", payload: items[0]})
+            console.log(items[0])
+            dispatch({type:"SET_REAL_ESTATE_INVESTMENT", payload: items[0]})
         }
         getInvestment()
     }, [dispatch,params])
-    
-    const product = useSelector(state=>state.agricproduct)
   return (
-      <div className="w-full">
+    <div className="w-full">
         <div className="categories_Section flex-col">
             <CommerceNav/>
         </div>
@@ -53,4 +52,4 @@ const AgricultureProduct = () => {
   )
 }
 
-export default AgricultureProduct
+export default RealEstateProduct

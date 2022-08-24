@@ -14,6 +14,10 @@ import PrivateSales from './components/pages/PrivateSales';
 import Eclacommerce from './components/pages/Eclacommerce';
 import Agriculture from './components/pages/Agriculture';
 import AgricultureProduct from './components/pages/AgricultureProduct';
+import Realestate from './components/pages/Realestate';
+import RealEstateProduct from './components/pages/RealEstateProduct';
+import DigitalAccessMarket from './components/pages/DigitalAccessMarket';
+import DigitalAccessProduct from './components/pages/DigitalAccessProduct';
 const coinStore = createStore(coinReducer)
 function App() {
   return (
@@ -29,7 +33,11 @@ function App() {
         <Route path='/buyecla' element={<Provider store={coinStore}><EclaBuy/></Provider>}></Route>
         <Route path='/eclacommerce' element={<Provider store={coinStore}><Eclacommerce/></Provider>}></Route>
         <Route path='/agriculture' element={<Provider store={coinStore}><Agriculture/></Provider>}></Route>
+        <Route path='/real-estate' element={<Provider store={coinStore}><Realestate/></Provider>}></Route>
+        <Route path='/digital-access-management' element={<Provider store={coinStore}><DigitalAccessMarket/></Provider>}></Route>
         <Route path='/agricproduct/:id' element={<Provider store={coinStore}><AgricultureProduct/></Provider>}></Route>
+        <Route path='/realestate/:id' element={<Provider store={coinStore}><RealEstateProduct/></Provider>}></Route>
+        <Route path='/digital-access-market/:id' element={<Provider store={coinStore}><DigitalAccessProduct/></Provider>}></Route>
       </Routes>
    </BrowserRouter>
   );

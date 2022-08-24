@@ -4,13 +4,13 @@ import CommerceNav from "../static/CommerceSection/CommerceNav"
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../static/Footer";
-
-const Agriculture = () => {
+ 
+const Realestate = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const agric = useSelector(state=>state.agriculture)
+    const realestate = useSelector(state=>state.real_estate)
     const productPage = async (item) => {
-        navigate(`/agricproduct/${item.fields.slug}`)
+        navigate(`/realestate/${item.fields.slug}`)
     }
     useEffect(() => {
         const getInfo = async () => {
@@ -18,8 +18,8 @@ const Agriculture = () => {
                 space: process.env.REACT_APP_CONTENTFUL_SPACE_ID,
                 accessToken: process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN
             });
-            const agriculture = await client.getEntries({ content_type: "agriculture" })
-            dispatch({type: "SET_AGRICULTURE_SECTION", payload:agriculture.items})
+            const real_estate = await client.getEntries({ content_type: "realEstate" })
+            dispatch({type: "SET_REALESTATE_SECTION", payload:real_estate.items})
         }
         getInfo()
     }, [dispatch])
@@ -29,15 +29,15 @@ const Agriculture = () => {
             <CommerceNav/>
             <div className="w-full flex h-fit my-auto">
                 <div className="max_size my-auto h-full flex flex-col">
-                    <h1 className="text-center text-5xl text-white font-semibold">Agriculture</h1>
+                    <h1 className="text-center text-5xl text-white font-semibold">Real Estate</h1>
                 </div>
             </div>
         </div>
         <div className="w-full flex mt-5">
             <div className="max_size my-auto flex flex-col">
-                {agric&&(
+                {realestate&&(
                     <div className='flex flex-wrap'>
-                        {agric.map((item,index)=>{
+                        {realestate.map((item,index)=>{
                             return (
                             <div key={index} className='md:w-1/2 w-full lg:w-1/3 p-5'>
                                 <div className='bg-white w-full p-5 rounded flex flex-col h-full' onClick={()=>productPage(item)}>
@@ -57,4 +57,4 @@ const Agriculture = () => {
   )
 }
 
-export default Agriculture
+export default Realestate
