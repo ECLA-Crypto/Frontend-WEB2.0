@@ -68,12 +68,10 @@ const EclaEcosystem = () => {
               <div className="w-11/12 mx-auto flex flex-col justify-between h-full">
                 <EcosystemNav/>
                 <div className="h-4/6 w-full flex flex-col">
-                  <h1 className="sm:text-5xl md:text-5xl md:w-3/5 w-full text-4xl font-bold text-white mx-auto text-center">Blockchain Ecosystem for Real People</h1>
+                  <h1 className="sm:text-6xl md:text-6xl md:w-3/5 w-full text-4xl font-bold text-white mx-auto text-center">Blockchain Ecosystem for Real People</h1>
                   <span className="flex md:gap-10 gap-5 mt-7 md:mt-10 mx-auto flex-wrap items-center justify-center">
-                    <button className="text-sm text-white connect_btn px-8 py-2">Roadmap</button>
-                    <button className="text-sm px-8 py-2 bg-white whitepaper_btn">Road Whitepaper</button>
-                    <img src="/assets/EcosysImages/eclaLogo3.png" className="h-24 md:h-32 absolute md:left-20 xl:left-52 left-5 z-0 md:bottom-2 bottom-1" alt="Ecla Logo"/>
-                    <img src="/assets/EcosysImages/eclipse.png" className="h-32 absolute md:right-20 right-0 bottom-0" alt="Eclipse"/>
+                    <button className="text-lg text-white connect_btn px-8 py-2 lg:px-10 lg:py-3">Roadmap</button>
+                    <button onClick={()=> window.open("/assets/pdf/whitepaper.pdf","_blank")} className="text-lg px-8 py-2 bg-white whitepaper_btn lg:px-10 lg:py-3">Read Whitepaper</button>
                   </span>
                 </div>
               </div>
@@ -94,7 +92,7 @@ const EclaEcosystem = () => {
                 <span className="md:w-6/12 w-full">
                     <h1 className="text-xl font-semibold ecosysTitles">Enhancing the development of different areas in the global economy.</h1>
                     <p className="text-xs text-gray-700 mt-5">The ECLA CHAIN is aimed at building a solid ground for agriculture, real estate and e-commerce; seeing that these are major industries in today’s world; hence our motto is Blockchainecosystem for real people.</p>
-                    <button className="connect_btn px-8 py-2 mt-7 text-white">Read Whitepaper</button>
+                    <button onClick={()=> window.open("/assets/pdf/whitepaper.pdf","_blank")} className="connect_btn px-8 py-2 mt-7 text-white">Read Whitepaper</button>
                 </span>
                 <span className="md:w-4/12 w-full md:mt-0 mt-5">
                     <img src="/assets/EcosysImages/building.png" className="md:h-fit h-32 mx-auto" alt="Database"/>

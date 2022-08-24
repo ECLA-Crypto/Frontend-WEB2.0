@@ -168,7 +168,7 @@ code {
   background-repeat: no-repeat!important; 
   background-position: left;
   background-size: cover;
-  background: linear-gradient(rgb(23, 24, 64), rgb(23, 24, 64)), url('/public/assets/backgoundImages/spiral_bg.svg');
+  background: linear-gradient(120deg, rgb(23, 24, 64), rgb(0, 169, 240)), url('/public/assets/backgoundImages/spiral_bg.svg');
   background-blend-mode: overlay;
 }
 .whitepaper_btn {
