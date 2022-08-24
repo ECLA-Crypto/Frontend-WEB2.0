@@ -220,6 +220,9 @@ code {
 .hero_Section {
   @apply w-full h-screen flex px-5 md:px-10 xl:px-0 
 }
+.categories_Section {
+  @apply w-full flex px-5 md:px-10 xl:px-0 
+}
 .max_size {
   @apply w-full lg:max-w-7xl mx-auto
 }

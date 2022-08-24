@@ -8,6 +8,8 @@ const defaultState = {
     heroSection: [],
     investmentTopSection: [],
     investmentPlans: [],
+    agriculture: [],
+    agricproduct:[],
 }
 const coinReducer = (state=defaultState, action ) =>{
     if(action.type === "SET_TOP_COIN"){
@@ -36,6 +38,12 @@ const coinReducer = (state=defaultState, action ) =>{
         return newState;
     } else if(action.type === "SET_INVESTMENT_PLANS_SECTION"){
         let newState = {...state, investmentPlans:action.payload}
+        return newState;
+    } else if(action.type === "SET_AGRICULTURE_SECTION"){
+        let newState = {...state, agriculture:action.payload}
+        return newState;
+    } else if(action.type === "SET_AGRICULTURE_INVESTMENT"){
+        let newState = {...state, agricproduct:action.payload}
         return newState;
     }
     return state
