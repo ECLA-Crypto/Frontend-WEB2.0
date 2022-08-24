@@ -18,6 +18,7 @@ import Realestate from './components/pages/Realestate';
 import RealEstateProduct from './components/pages/RealEstateProduct';
 import DigitalAccessMarket from './components/pages/DigitalAccessMarket';
 import DigitalAccessProduct from './components/pages/DigitalAccessProduct';
+import UserDashboard from './components/pages/UserDashboard';
 const coinStore = createStore(coinReducer)
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path='/agricproduct/:id' element={<Provider store={coinStore}><AgricultureProduct/></Provider>}></Route>
         <Route path='/realestate/:id' element={<Provider store={coinStore}><RealEstateProduct/></Provider>}></Route>
         <Route path='/digital-access-market/:id' element={<Provider store={coinStore}><DigitalAccessProduct/></Provider>}></Route>
+        <Route path='/user-dashboard' element={<Provider store={coinStore}><UserDashboard/></Provider>}></Route>
       </Routes>
    </BrowserRouter>
   );
