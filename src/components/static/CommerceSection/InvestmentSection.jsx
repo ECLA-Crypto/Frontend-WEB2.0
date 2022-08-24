@@ -1,7 +1,9 @@
 import { AiOutlineArrowDown } from 'react-icons/ai';
 import { useSelector } from 'react-redux/es/exports';
+import { Link } from 'react-router-dom';
 const InvestmentSection = () => {
     const investmentTopSection = useSelector(state=>state.investmentTopSection)
+    const investmentPlans = useSelector(state=>state.investmentPlans)
   return (
     <div className="w-full each_Section" id="investment_plans">
         <div className="max_size flex flex-col py-10">
@@ -14,15 +16,19 @@ const InvestmentSection = () => {
                 )
             })}
             <div className='flex flex-wrap justify-center'>
-                <div className='md:w-1/2 w-full lg:w-1/3 p-5'>
-                    <div className='bg-white w-full p-5 rounded'></div>
-                </div>
-                <div className='md:w-1/2 w-full lg:w-1/3 p-5'>
-                    <div className='bg-white w-full p-5 rounded'></div>
-                </div>
-                <div className='md:w-1/2 w-full lg:w-1/3 p-5'>
-                    <div className='bg-white w-full p-5 rounded'></div>
-                </div>
+                {investmentPlans.map((item,index)=>{
+                    return (
+                    <div key={index} className='md:w-1/2 w-full lg:w-1/3 p-5'>
+                        <Link to={item.fields.link}>
+                            <div className='bg-white w-full p-5 rounded flex flex-col'>
+                                <div className='w-full rounded-t h-48 bg-gray-500'>{item.fields.image&&(<img src={item.fields.image.fields.file.url} alt={item.fields.image.fields.title}/>)}</div>
+                                <h1 className='text-gray-700 text-2xl font-semibold mt-5'>{item.fields.title}</h1>
+                                <p className='text-sm text-gray-700 font-semibold'>{item.fields.content.substring(0, 110) + '...'}</p>
+                            </div>
+                        </Link>
+                    </div>
+                    )
+                })}
             </div>
         </div>
     </div>

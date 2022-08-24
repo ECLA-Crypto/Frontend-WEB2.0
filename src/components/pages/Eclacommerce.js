@@ -4,6 +4,7 @@ import { createClient } from "contentful";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import InvestmentSection from "../static/CommerceSection/InvestmentSection";
+import Footer from "../static/Footer";
 
 const Eclacommerce = () => {
     const dispatch = useDispatch()
@@ -15,8 +16,10 @@ const Eclacommerce = () => {
               });
             const herosection = await client.getEntries({ content_type: "heroSection" })
             const investmentTopSection = await client.getEntries({ content_type: "investmentTopSection" })
+            const investmentPlans = await client.getEntries({ content_type: "investmentPlans" })
             dispatch({type: "SET_HERO_SECTION", payload:herosection.items})
             dispatch({type: "SET_INVESTMENT_TOP_SECTION", payload:investmentTopSection.items})
+            dispatch({type: "SET_INVESTMENT_PLANS_SECTION", payload:investmentPlans.items})
         }
         getInfo()
     }, [dispatch])
@@ -28,6 +31,7 @@ const Eclacommerce = () => {
             <CommerceHero/>
         </div>
         <InvestmentSection/>
+        <Footer/>
     </div>
   )
 }

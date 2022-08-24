@@ -26,6 +26,7 @@ function App() {
         <Route path='/' element={<Provider store={coinStore}><EclaEcosystem/></Provider>}></Route>
         <Route path='/buyecla' element={<Provider store={coinStore}><EclaBuy/></Provider>}></Route>
         <Route path='/eclacommerce' element={<Provider store={coinStore}><Eclacommerce/></Provider>}></Route>
+        <Route path='/eclacommerce/agriculture' element={<Provider store={coinStore}><Eclacommerce/></Provider>}></Route>
       </Routes>
    </BrowserRouter>
   );

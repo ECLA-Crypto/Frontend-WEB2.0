@@ -14,7 +14,7 @@ const CommerceNav = () => {
     }
     window.addEventListener('scroll', stickyTop)
   return (
-    <div className={`w-full py-5 flex ${classs?'bg-eclablue fixed z-40 left-0 top-0':''}`}>
+    <div className={`w-full py-5 flex ${classs?'py-2 px-3 bg-eclablue fixed z-40 left-0 top-0':''}`}>
         <nav className="max_size md:flex hidden justify-between items-center">
             <img src="/assets/logos/swapLogo.svg" alt="Commerce logo" className="h-10" />
             <ul className='flex text-white gap-5 items-center text-sm'>
