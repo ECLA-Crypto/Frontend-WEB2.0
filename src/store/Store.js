@@ -5,6 +5,8 @@ const defaultState = {
     fetchTime:{time:1},
     connectPage: 'swap',
     privateSales: true,
+    heroSection: [],
+    investmentTopSection: [],
 }
 const coinReducer = (state=defaultState, action ) =>{
     if(action.type === "SET_TOP_COIN"){
@@ -24,6 +26,12 @@ const coinReducer = (state=defaultState, action ) =>{
         return newState;
     } else if(action.type === "SET_PRIVATE_SALES"){
         let newState = {...state, privateSales:action.payload}
+        return newState;
+    } else if(action.type === "SET_HERO_SECTION"){
+        let newState = {...state, heroSection:action.payload}
+        return newState;
+    } else if(action.type === "SET_INVESTMENT_TOP_SECTION"){
+        let newState = {...state, investmentTopSection:action.payload}
         return newState;
     }
     return state

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js,jsx}"],
   presets: [],
   darkMode: 'media', // or 'class'
   theme: {
@@ -12,6 +12,7 @@ module.exports = {
       '2xl': '1536px',
     },
     colors: ({ colors }) => ({
+      eclablue: "#23255A",
       inherit: colors.inherit,
       current: colors.current,
       transparent: colors.transparent,
