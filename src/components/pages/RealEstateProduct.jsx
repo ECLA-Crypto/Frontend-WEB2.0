@@ -30,8 +30,8 @@ const RealEstateProduct = () => {
         {product&&(
             <div className="mt-5 p-5 max_size">
                 <div className="flex w-full flex-col md:flex-row">
-                    <div className="w-1/2 h-72 bg-gray-800"></div>
-                    <div className="w-1/2 p-5">
+                    <div className="w-full md:w-1/2 h-72 bg-gray-800"></div>
+                    <div className="w-full md:w-1/2 p-5">
                         <h1 className="text-4xl font-semibold text-white">{product.fields.plan}</h1>
                         <p className="text-white text-lg mt-5">{product.fields.minInvestment}</p>
                     </div>

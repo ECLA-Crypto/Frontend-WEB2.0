@@ -23,7 +23,7 @@ const CommerceNav = () => {
                 <li><Link to='/eclacommerce'>Home</Link></li>
                 <li><Link to='/eclacommerce'>Investment Plans</Link></li>
                 <li><Link to='/eclacommerce'>Contact Us</Link></li>
-                <li><button className="connect_btn px-5 py-2">Connect Wallet</button></li>
+                <li><Link to='/user-dashboard'><button className="connect_btn px-5 py-2">Connect Wallet</button></Link></li>
             </ul>
         </nav>
         <nav className='w-full flex md:hidden justify-between items-center py-2'>
@@ -38,7 +38,7 @@ const CommerceNav = () => {
                         <li><Link onClick={()=>setToggle(false)} to='/eclacommerce'>Home</Link></li>
                         <li><Link onClick={()=>setToggle(false)} to='/eclacommerce'>Investment Plans</Link></li>
                         <li><Link onClick={()=>setToggle(false)} to='/eclacommerce'>Contact Us</Link></li>
-                        <li><button onClick={()=>setToggle(false)} className="connect_btn px-5 py-2">Connect Wallet</button></li>
+                        <li><Link to='/user-dashboard'><button onClick={()=>setToggle(false)} className="connect_btn px-5 py-2">Connect Wallet</button></Link></li>
                     </ul>
                 </div>
                 <div className='w-2/12 h-full py-5 flex justify-center' onClick={()=>setToggle(false)}>
