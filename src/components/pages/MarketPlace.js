@@ -1,8 +1,38 @@
 import Helmet from "react-helmet"
 import Footer from "../static/Footer"
 import MarketplaceNav from "../static/MarketplaceNav"
+import Slider from 'react-slick';
 
 const MarketPlace = () => {
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        centerMode: true,
+        slidesToShow: 3,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                arrows: false,
+                centerMode: true,
+                slidesToShow: 3
+            }
+            },
+            {
+                arrows: false,
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    slidesToShow: 1
+                }
+            }
+        ]
+    };
   return (
       <>
         <div className="main_bg w-11/12 mx-auto pt-10">
@@ -18,8 +48,23 @@ const MarketPlace = () => {
                         <button className="trade md:px-7 px-5 py-2.5 text-white text-sm">Create NFT</button>
                     </div>
                 </span>
-                <span className="w-2/3 lg:w-2/3 xl:w-1/2 hidden sm:block rounded-lg mx-auto">
-                    <img src="/assets/marketplace/marketplace.png" className="w-full" alt=""/>
+                <span className="w-full sm:w-2/3 lg:w-2/3 xl:w-1/2 flex rounded-lg mx-auto">
+                    <div className="get_started py-3 h-80 z-0 w-full left-0 absolute"></div>
+                    <Slider className="w-full mx-auto" {...settings}>
+                        <div className="w-32 h-52 p-7">
+                            <div className="w-full p-5 bg-blue-900/80 h-full"></div>
+                        </div>
+                        <div className="w-32 h-52 p-7">
+                            <div className="w-full p-5 bg-blue-900/80 h-full"></div>
+                        </div>
+                        <div className="w-32 h-52 p-7">
+                            <div className="w-full p-5 bg-blue-900/80 h-full"></div>
+                        </div>
+                        <div className="w-32 h-52 p-7">
+                            <div className="w-full p-5 bg-blue-900/80 h-full"></div>
+                        </div>
+                    </Slider>
+                    {/* <img src="/assets/marketplace/marketplace.png" className="w-full" alt="Marketplace"/> */}
                     {/* <span className="justify-between flex mt-5">
                         <span className="flex items-center">
                             <span className="rounded-full w-10 h-10 bg-gray-400">d</span>  
