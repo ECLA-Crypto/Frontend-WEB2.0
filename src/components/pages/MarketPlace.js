@@ -10,17 +10,17 @@ const MarketPlace = () => {
             <title>ECLA MarketPlace</title>
             </Helmet>
             <MarketplaceNav/>
-            <div className="h-full flex py-20 flex justify-between items-center">
-                <span className="text-white w-11/12 sm:w-1/2">
-                    <h1 className="sm:text-3xl text-3xl lg:text-5xl font-semibold">Discover, collect, <br/> extraordinary NFT <br/> for real people</h1>
-                    <span className="flex gap-5 mt-7">
-                        <button className="connect_btn px-10 py-2.5 text-white text-sm">Explore</button>
-                        <button className="trade px-7 py-2.5 text-white text-sm">Create NFT</button>
-                    </span>
+            <div className="h-full py-20 flex flex-col justify-between items-center gap-10">
+                <span className="text-white w-11/12 sm:w-1/2 mx-auto">
+                    <h1 className="sm:text-3xl text-3xl lg:text-5xl font-semibold text-center">Discover, collect, extraordinary NFT for real people</h1>
+                    <div className="flex gap-5 mt-7 mx-auto w-fit">
+                        <button className="connect_btn px-7 md:px-10 py-2.5 text-white text-sm">Explore</button>
+                        <button className="trade md:px-7 px-5 py-2.5 text-white text-sm">Create NFT</button>
+                    </div>
                 </span>
-                <span className="w-5/12 lg:w-1/2 xl:w-1/3 hidden sm:block hero_card p-7 rounded-lg border border-purple-500">
-                    <img src="/assets/liquidgrad.png" className="w-full" alt=""/>
-                    <span className="justify-between flex mt-5">
+                <span className="w-2/3 lg:w-2/3 xl:w-1/2 hidden sm:block rounded-lg mx-auto">
+                    <img src="/assets/marketplace/marketplace.png" className="w-full" alt=""/>
+                    {/* <span className="justify-between flex mt-5">
                         <span className="flex items-center">
                             <span className="rounded-full w-10 h-10 bg-gray-400">d</span>  
                             <span className="text-white ml-2">
@@ -32,7 +32,7 @@ const MarketPlace = () => {
                             <h5 className="font-medium text-sm">WE ARE HERE</h5>
                             <p className="text-xs text-right">25</p>
                         </span>
-                    </span>
+                    </span> */}
                 </span>
             </div>
             <div className="mt-10 w-11/12 mx-auto">

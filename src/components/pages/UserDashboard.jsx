@@ -11,12 +11,12 @@ const UserDashboard = () => {
                 <div className="md:w-1/2 w-full p-5 h-60">
                     <div className="bg-gray-300 w-full h-full"></div>
                 </div>
-                <div className="md:w-1/2 w-full p-5 flex gap-5 justify-between">
-                    <div className="w-fit bg-gray-300 flex justify-center items-center p-5 flex-col text-gray-900">
+                <div className="md:w-1/2 w-full p-5 flex gap-5 justify-between md:flex-row flex-col">
+                    <div className="md:w-fit w-full bg-gray-300 flex justify-center items-center p-5 flex-col text-gray-900">
                         <h4 className="font-semibold text-2xl">40</h4>
                         <h4 className="font-semibold text-xl">Pending Cashout</h4>
                     </div>
-                    <div className="w-fit bg-gray-300 flex justify-center items-center p-5 flex-col text-gray-900">
+                    <div className="md:w-fit w-full bg-gray-300 flex justify-center items-center p-5 flex-col text-gray-900">
                         <h4 className="font-semibold text-2xl">40</h4>
                         <h4 className="font-semibold text-xl">Paid Investment</h4>
                     </div>
