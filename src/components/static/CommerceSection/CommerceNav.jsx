@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import {Link} from 'react-router-dom'
-import { BiMenuAltRight } from 'react-icons/bi';
+import { BiMenuAltRight,BiUserCircle } from 'react-icons/bi';
 import { AiOutlineClose } from 'react-icons/ai';
 const CommerceNav = () => {
+    const [menu, setMenu] = useState(false)
+    const [connected, setConnected] = useState(false)
     const [toggle, setToggle] = useState(false)
     const [classs, setClasss] = useState(false)
     const stickyTop = () => {
@@ -13,8 +15,15 @@ const CommerceNav = () => {
         }
     }
     window.addEventListener('scroll', stickyTop)
+    const connectWallet = () => {
+        setConnected(true)
+    }
+    const close = () => {
+        setMenu(false)
+        setToggle(false)
+    }
   return (
-    <div className={`w-full py-5 flex ${classs?'py-2 px-3 bg-eclablue fixed z-40 left-0 top-0':''}`}>
+    <div className={`w-full py-5 flex z-40 ${classs?'py-2 px-3 bg-eclablue fixed z-40 left-0 top-0':''}`}>
         <nav className="max_size md:flex hidden justify-between items-center">
             <Link to='/'>
                 <img src="/assets/logos/eclahedge.png" alt="Commerce logo" className="h-10" />
@@ -23,7 +32,22 @@ const CommerceNav = () => {
                 <li><Link to='/eclacommerce'>Home</Link></li>
                 <li><Link to='/eclacommerce'>Investment Plans</Link></li>
                 <li><Link to='/eclacommerce'>Contact Us</Link></li>
-                <li><Link to='/user-dashboard'><button className="connect_btn px-5 py-2">Connect Wallet</button></Link></li>
+                {!connected&&<li><button onClick={connectWallet} className="connect_btn px-5 py-2">Connect Wallet</button></li>}
+                {connected&&
+                    <div class="relative inline-block text-left">
+                        <div>
+                            <button onClick={()=>setMenu(true)} type="button" class="inline-flex w-full text-sm font-medium shadow-sm outline-none" id="menu-button" aria-expanded="true" aria-haspopup="true"><BiUserCircle className='text-3xl text-white'/></button>
+                        </div>
+                        {menu&&
+                            <div class="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                                <div class="py-2 px-5" role="none">
+                                    <Link to='/user-dashboard'><p className='text-gray-700 py-2' onClick={close}>Dashboard</p></Link>
+                                    <Link to='/affiliate'><p className='text-gray-700 py-2' onClick={close}>Affiliate</p></Link>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
             </ul>
         </nav>
         <nav className='w-full flex md:hidden justify-between items-center py-2'>
@@ -38,7 +62,22 @@ const CommerceNav = () => {
                         <li><Link onClick={()=>setToggle(false)} to='/eclacommerce'>Home</Link></li>
                         <li><Link onClick={()=>setToggle(false)} to='/eclacommerce'>Investment Plans</Link></li>
                         <li><Link onClick={()=>setToggle(false)} to='/eclacommerce'>Contact Us</Link></li>
-                        <li><Link to='/user-dashboard'><button onClick={()=>setToggle(false)} className="connect_btn px-5 py-2">Connect Wallet</button></Link></li>
+                        {!connected&&<li><Link to='/user-dashboard'><button onClick={connectWallet} className="connect_btn px-5 py-2">Connect Wallet</button></Link></li>}
+                        {connected&&
+                            <div class="relative inline-block text-left w-full">
+                                <div>
+                                    <button onClick={()=>setMenu(true)} type="button" class="inline-flex items-center gap-2 w-full text-sm font-medium shadow-sm outline-none" id="menu-button" aria-expanded="true" aria-haspopup="true"><BiUserCircle className='text-3xl text-white'/>Profile</button>
+                                </div>
+                                {menu&&
+                                    <div class="absolute left-0 mt-2 w-52 origin-top-right bg-white outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                                        <div class="py-2 px-5" role="none">
+                                            <Link to='/user-dashboard'><p className='text-gray-700 py-2 font-semibold tracking-wider' onClick={close}>Dashboard</p></Link>
+                                            <Link to='/affiliate'><p className='text-gray-700 py-2 font-semibold tracking-wider' onClick={close}>Affiliate</p></Link>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        }
                     </ul>
                 </div>
                 <div className='w-2/12 h-full py-5 flex justify-center' onClick={()=>setToggle(false)}>

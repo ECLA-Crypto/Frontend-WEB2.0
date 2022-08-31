@@ -21,6 +21,7 @@ import RealEstateProduct from './components/pages/RealEstateProduct';
 import DigitalAccessMarket from './components/pages/DigitalAccessMarket';
 import DigitalAccessProduct from './components/pages/DigitalAccessProduct';
 import UserDashboard from './components/pages/UserDashboard';
+import AffiliateSection from "./components/pages/AffiliateSection";
 const coinStore = createStore(coinReducer)
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path='/realestate/:id' element={<Provider store={coinStore}><RealEstateProduct/></Provider>}></Route>
         <Route path='/digital-access-market/:id' element={<Provider store={coinStore}><DigitalAccessProduct/></Provider>}></Route>
         <Route path='/user-dashboard' element={<Provider store={coinStore}><UserDashboard/></Provider>}></Route>
+        <Route path='/affiliate' element={<Provider store={coinStore}><AffiliateSection/></Provider>}></Route>
       </Routes>
    </BrowserRouter>
   );

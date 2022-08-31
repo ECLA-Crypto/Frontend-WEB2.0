@@ -1,5 +1,5 @@
-import Chart from "../static/Chart"
 import CommerceNav from "../static/CommerceSection/CommerceNav"
+import InvestmentChart from "../static/CommerceSection/InvestmentChart"
 
 const UserDashboard = () => {
   return (
@@ -10,7 +10,7 @@ const UserDashboard = () => {
         <div className="mt-5 p-5 max_size">
             <div className="w-full flex flex-col md:flex-row">
                 <div className="md:w-1/2 w-full p-5 h-fit">
-                    <Chart/>
+                    <InvestmentChart/>
                     {/* <div className="bg-gray-300 w-full h-full"></div> */}
                 </div>
                 <div className="md:w-1/2 w-full p-5 flex gap-5 justify-between md:flex-row flex-col">
