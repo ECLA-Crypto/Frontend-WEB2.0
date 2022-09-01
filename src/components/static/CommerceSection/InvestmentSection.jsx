@@ -20,8 +20,8 @@ const InvestmentSection = () => {
                     return (
                     <div key={index} className='md:w-1/2 w-full lg:w-1/3 p-5'>
                         <Link to={`/${item.fields.link}`}>
-                            <div className='bg-white w-full p-5 rounded flex flex-col h-full'>
-                                <div className='w-full rounded-t h-48 bg-gray-500'>{item.fields.image&&(<img src={item.fields.image.fields.file.url} alt={item.fields.image.fields.title}/>)}</div>
+                            <div className='bg-white w-full p-5 rounded-3xl flex flex-col h-full'>
+                                <div className='w-full rounded-t-3xl h-48 bg-gray-500'>{item.fields.image&&(<img src={item.fields.image.fields.file.url} alt={item.fields.image.fields.title}/>)}</div>
                                 <h1 className='text-gray-700 text-2xl font-semibold mt-5'>{item.fields.title}</h1>
                                 <p className='text-sm text-gray-700 font-semibold'>{item.fields.content.substring(0, 110) + '...'}</p>
                             </div>

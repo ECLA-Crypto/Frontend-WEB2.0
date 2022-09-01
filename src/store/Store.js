@@ -14,6 +14,7 @@ const defaultState = {
     realEstateProduct:false,
     digitalAccessMarket: false,
     digitalAccessMarketProduct: false,
+    marketplaceCarousel: false,
 }
 const coinReducer = (state=defaultState, action ) =>{
     if(action.type === "SET_TOP_COIN"){
@@ -60,6 +61,9 @@ const coinReducer = (state=defaultState, action ) =>{
         return newState;
     } else if(action.type === "SET_DIGITAL_INVESTMENT"){
         let newState = {...state, digitalAccessMarketProduct:action.payload}
+        return newState;
+    } else if(action.type === "SET_MARKETPLACE_CAROUSEL"){
+        let newState = {...state, marketplaceCarousel:action.payload}
         return newState;
     }
     return state

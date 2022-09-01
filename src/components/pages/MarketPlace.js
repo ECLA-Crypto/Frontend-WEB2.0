@@ -2,6 +2,9 @@ import Helmet from "react-helmet"
 import Footer from "../static/Footer"
 import MarketplaceNav from "../static/MarketplaceNav"
 import Slider from 'react-slick';
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { createClient } from "contentful";
 
 const MarketPlace = () => {
     const settings = {
@@ -33,6 +36,19 @@ const MarketPlace = () => {
             }
         ]
     };
+    const dispatch = useDispatch()
+    useEffect(() => {
+        const getInfo = async () => {
+            const client = createClient({
+                space: process.env.REACT_APP_ECLA_CONTENTFUL_SPACE_ID,
+                accessToken: process.env.REACT_APP_ECLA_CONTENTFUL_ACCESS_TOKEN
+            });
+            const carousel = await client.getEntries({ content_type: "marketplaceCarousel" })
+            dispatch({type: "SET_MARKETPLACE_CAROUSEL", payload:carousel.items})
+        }
+        getInfo()
+    }, [dispatch])
+    const carousel = useSelector(state=>state.marketplaceCarousel)
   return (
       <>
         <div className="main_bg w-11/12 mx-auto pt-10">
@@ -50,20 +66,17 @@ const MarketPlace = () => {
                 </span>
                 <span className="w-full sm:w-2/3 lg:w-2/3 xl:w-1/2 flex rounded-lg mx-auto">
                     <div className="get_started py-3 h-80 z-0 w-full left-0 absolute"></div>
-                    <Slider className="w-full mx-auto" {...settings}>
-                        <div className="w-32 h-52 p-7">
-                            <div className="w-full bg-blue-900/80 h-full"><img src="/assets/nfts/nft1.png" alt="NFT" className="w-full h-full object-cover rounded"/></div>
-                        </div>
-                        <div className="w-32 h-52 p-7">
-                            <div className="w-full bg-blue-900/80 h-full"><img src="/assets/nfts/nft2.png" alt="NFT" className="w-full h-full object-cover rounded"/></div>
-                        </div>
-                        <div className="w-32 h-52 p-7">
-                            <div className="w-full bg-blue-900/80 h-full"><img src="/assets/nfts/nft3.png" alt="NFT" className="w-full h-full object-cover rounded"/></div>
-                        </div>
-                        <div className="w-32 h-52 p-7">
-                            <div className="w-full bg-blue-900/80 h-full"><img src="/assets/nfts/nft4.png" alt="NFT" className="w-full h-full object-cover rounded"/></div>
-                        </div>
-                    </Slider>
+                    {carousel&&(
+                        <Slider className="w-full mx-auto" {...settings}>
+                            {carousel.map((item,index)=>{
+                                return(
+                                    <div className="w-32 h-52 p-7" key={index}>
+                                        <div className="w-full bg-blue-900/80 h-full rounded-xl"><img src={item.fields.image.fields.file.url} alt={item.fields.image.fields.title} className="w-full h-full object-cover rounded-xl"/></div>
+                                    </div>
+                                )
+                            })}
+                        </Slider>
+                    )}
                 </span>
             </div>
             <div className="mt-10 w-11/12 mx-auto">
@@ -77,7 +90,7 @@ const MarketPlace = () => {
                     <span className="sm:w-5/12 w-11/12 lg:w-1/5 mx-auto">
                         <div className="bg-gray-500 rounded-lg h-52 relative">
                             <div className="rounded absolute top-3 left-3 bg-eclablue text-white font-semibold text-xs p-2">Comming Soon</div>
-                            <img src="/assets/nfts/nft5.png" alt="NFT" className="w-full h-full object-cover rounded"/>
+                            <img src="/assets/nfts/nft11.jpeg" alt="NFT" className="w-full h-full object-cover rounded"/>
                         </div>
                         <span className="flex justify-between mt-5 items-center text-white">
                             <strong className="text-xs">Lorem Ipsum</strong>
@@ -90,9 +103,9 @@ const MarketPlace = () => {
                         </span>
                     </span>
                     <span className="sm:w-5/12 w-11/12 lg:w-1/5 mx-auto">
-                        <div className="bg-gray-500 rounded-lg h-52 relative">
+                        <div className="bg-gray-500 rounded-xl h-52 relative">
                             <div className="rounded absolute top-3 left-3 bg-eclablue text-white font-semibold text-xs p-2">Comming Soon</div>
-                            <img src="/assets/nfts/nft6.png" alt="NFT" className="w-full h-full object-cover rounded"/>
+                            <img src="/assets/nfts/nft12.jpeg" alt="NFT" className="w-full h-full object-cover rounded-xl"/>
                         </div>
                         <span className="flex justify-between mt-5 items-center text-white">
                             <strong className="text-xs">Dolor sit amet</strong>
@@ -105,9 +118,9 @@ const MarketPlace = () => {
                         </span>
                     </span>
                     <span className="sm:w-5/12 w-11/12 lg:w-1/5 mx-auto">
-                        <div className="bg-gray-500 rounded-lg h-52 relative">
+                        <div className="bg-gray-500 rounded-xl h-52 relative">
                             <div className="rounded absolute top-3 left-3 bg-eclablue text-white font-semibold text-xs p-2">Comming Soon</div>
-                            <img src="/assets/nfts/nft7.png" alt="NFT" className="w-full h-full object-cover rounded"/>
+                            <img src="/assets/nfts/nft13.jpeg" alt="NFT" className="w-full h-full object-cover rounded-xl"/>
                         </div>
                         <span className="flex justify-between mt-5 items-center text-white">
                             <strong className="text-xs">Dignissim curabitu..</strong>
@@ -120,9 +133,9 @@ const MarketPlace = () => {
                         </span>
                     </span>
                     <span className="sm:w-5/12 w-11/12 lg:w-1/5 mx-auto">
-                        <div className="bg-gray-500 rounded-lg h-52 relative">
+                        <div className="bg-gray-500 rounded-xl h-52 relative">
                             <div className="rounded absolute top-3 left-3 bg-eclablue text-white font-semibold text-xs p-2">Comming Soon</div>
-                            <img src="/assets/nfts/nft8.png" alt="NFT" className="w-full h-full object-cover rounded"/>
+                            <img src="/assets/nfts/nft14.jfif" alt="NFT" className="w-full h-full object-cover rounded-xl"/>
                         </div>
                         <span className="flex justify-between mt-5 items-center text-white">
                             <strong className="text-xs">Amet pellentesq..</strong>
@@ -193,9 +206,9 @@ const MarketPlace = () => {
                         </nav>
                         <div className="flex gap-10 flex-wrap justify-between my-10">
                         <span className="sm:w-5/12 w-11/12 lg:w-1/5 mx-auto">
-                        <div className="bg-gray-500 rounded-lg h-52 relative">
+                        <div className="bg-gray-500 rounded-xl h-52 relative">
                             <div className="rounded absolute top-3 left-3 bg-eclablue text-white font-semibold text-xs p-2">Comming Soon</div>
-                            <img src="/assets/nfts/nft5.png" alt="NFT" className="w-full h-full object-cover rounded"/>
+                            <img src="/assets/nfts/nft15.jfif" alt="NFT" className="w-full h-full object-cover rounded-xl"/>
                         </div>
                         <span className="flex justify-between mt-5 items-center text-white">
                             <strong className="text-xs">Lorem Ipsum</strong>
@@ -208,9 +221,9 @@ const MarketPlace = () => {
                         </span>
                         </span>
                         <span className="sm:w-5/12 w-11/12 lg:w-1/5 mx-auto">
-                            <div className="bg-gray-500 rounded-lg h-52 relative">
+                            <div className="bg-gray-500 rounded-xl h-52 relative">
                                 <div className="rounded absolute top-3 left-3 bg-eclablue text-white font-semibold text-xs p-2">Comming Soon</div>
-                                <img src="/assets/nfts/nft6.png" alt="NFT" className="w-full h-full object-cover rounded"/>
+                                <img src="/assets/nfts/nft16.jfif" alt="NFT" className="w-full h-full object-cover rounded-xl"/>
                             </div>
                             <span className="flex justify-between mt-5 items-center text-white">
                                 <strong className="text-xs">Dolor sit amet</strong>
@@ -223,9 +236,9 @@ const MarketPlace = () => {
                             </span>
                         </span>
                         <span className="sm:w-5/12 w-11/12 lg:w-1/5 mx-auto">
-                            <div className="bg-gray-500 rounded-lg h-52 relative">
+                            <div className="bg-gray-500 rounded-xl h-52 relative">
                                 <div className="rounded absolute top-3 left-3 bg-eclablue text-white font-semibold text-xs p-2">Comming Soon</div>
-                                <img src="/assets/nfts/nft7.png" alt="NFT" className="w-full h-full object-cover rounded"/>
+                                <img src="/assets/nfts/nft17.jfif" alt="NFT" className="w-full h-full object-cover rounded-xl"/>
                             </div>
                             <span className="flex justify-between mt-5 items-center text-white">
                                 <strong className="text-xs">Dignissim curabitu..</strong>
@@ -238,9 +251,9 @@ const MarketPlace = () => {
                             </span>
                         </span>
                         <span className="sm:w-5/12 w-11/12 lg:w-1/5 mx-auto">
-                            <div className="bg-gray-500 rounded-lg h-52 relative">
+                            <div className="bg-gray-500 rounded-xl h-52 relative">
                                 <div className="rounded absolute top-3 left-3 bg-eclablue text-white font-semibold text-xs p-2">Comming Soon</div>
-                                <img src="/assets/nfts/nft8.png" alt="NFT" className="w-full h-full object-cover rounded"/>
+                                <img src="/assets/nfts/nft18.jfif" alt="NFT" className="w-full h-full object-cover rounded-xl"/>
                             </div>
                             <span className="flex justify-between mt-5 items-center text-white">
                                 <strong className="text-xs">Amet pellentesq..</strong>
@@ -253,9 +266,9 @@ const MarketPlace = () => {
                             </span>
                         </span>
                         <span className="sm:w-5/12 w-11/12 lg:w-1/5 mx-auto">
-                            <div className="bg-gray-500 rounded-lg h-52 relative">
+                            <div className="bg-gray-500 rounded-xl h-52 relative">
                                 <div className="rounded absolute top-3 left-3 bg-eclablue text-white font-semibold text-xs p-2">Comming Soon</div>
-                                <img src="/assets/nfts/nft9.png" alt="NFT" className="w-full h-full object-cover rounded"/>
+                                <img src="/assets/nfts/nft19.png" alt="NFT" className="w-full h-full object-cover rounded-xl"/>
                             </div>
                             <span className="flex justify-between mt-5 items-center text-white">
                                 <strong className="text-xs">Lorem Ipsum</strong>
@@ -268,9 +281,9 @@ const MarketPlace = () => {
                             </span>
                         </span>
                         <span className="sm:w-5/12 w-11/12 lg:w-1/5 mx-auto">
-                            <div className="bg-gray-500 rounded-lg h-52 relative">
+                            <div className="bg-gray-500 rounded-xl h-52 relative">
                                 <div className="rounded absolute top-3 left-3 bg-eclablue text-white font-semibold text-xs p-2">Comming Soon</div>
-                                <img src="/assets/nfts/nft10.png" alt="NFT" className="w-full h-full object-cover rounded"/>
+                                <img src="/assets/nfts/nft10.png" alt="NFT" className="w-full h-full object-cover rounded-xl"/>
                             </div>
                             <span className="flex justify-between mt-5 items-center text-white">
                                 <strong className="text-xs">Dolor sit amet</strong>
@@ -283,9 +296,9 @@ const MarketPlace = () => {
                             </span>
                         </span>
                         <span className="sm:w-5/12 w-11/12 lg:w-1/5 mx-auto">
-                            <div className="bg-gray-500 rounded-lg h-52 relative">
+                            <div className="bg-gray-500 rounded-xl h-52 relative">
                                 <div className="rounded absolute top-3 left-3 bg-eclablue text-white font-semibold text-xs p-2">Comming Soon</div>
-                                <img src="/assets/nfts/nft1.png" alt="NFT" className="w-full h-full object-cover rounded"/>
+                                <img src="/assets/nfts/nft1.png" alt="NFT" className="w-full h-full object-cover rounded-xl"/>
                             </div>
                             <span className="flex justify-between mt-5 items-center text-white">
                                 <strong className="text-xs">Dignissim curabitu..</strong>
@@ -298,9 +311,9 @@ const MarketPlace = () => {
                             </span>
                         </span>
                         <span className="sm:w-5/12 w-11/12 lg:w-1/5 mx-auto">
-                            <div className="bg-gray-500 rounded-lg h-52 relative">
+                            <div className="bg-gray-500 rounded-xl h-52 relative">
                                 <div className="rounded absolute top-3 left-3 bg-eclablue text-white font-semibold text-xs p-2">Comming Soon</div>
-                                <img src="/assets/nfts/nft2.png" alt="NFT" className="w-full h-full object-cover rounded"/>
+                                <img src="/assets/nfts/nft2.png" alt="NFT" className="w-full h-full object-cover rounded-xl"/>
                             </div>
                             <span className="flex justify-between mt-5 items-center text-white">
                                 <strong className="text-xs">Amet pellentesq..</strong>
