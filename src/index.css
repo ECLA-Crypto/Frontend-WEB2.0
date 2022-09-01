@@ -218,13 +218,16 @@ code {
   @apply w-full md:h-fit h-fit flex px-5 md:px-10 xl:px-0 
 }
 .hero_Section {
-  @apply w-full flex px-5 md:px-10 xl:px-0 
+  @apply w-full min-h-screen flex px-5 md:px-10 xl:px-0 
 }
 .categories_Section {
   @apply w-full flex px-5 md:px-10 xl:px-0 
 }
 .max_size {
   @apply w-full lg:max-w-7xl mx-auto
+}
+.md_max_size {
+  @apply w-full lg:max-w-6xl mx-auto
 }
 ::-webkit-scrollbar-track {
   background: #f1f1f1; 

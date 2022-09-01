@@ -15,6 +15,9 @@ const defaultState = {
     digitalAccessMarket: false,
     digitalAccessMarketProduct: false,
     marketplaceCarousel: false,
+    pubbleHeroSection: false,
+    pubbleAboutContent: false,
+    pubbleAboutImages: false,
 }
 const coinReducer = (state=defaultState, action ) =>{
     if(action.type === "SET_TOP_COIN"){
@@ -64,6 +67,15 @@ const coinReducer = (state=defaultState, action ) =>{
         return newState;
     } else if(action.type === "SET_MARKETPLACE_CAROUSEL"){
         let newState = {...state, marketplaceCarousel:action.payload}
+        return newState;
+    } else if(action.type === "SET_PUBBLE_HERO_SECTION"){
+        let newState = {...state, pubbleHeroSection:action.payload}
+        return newState;
+    } else if(action.type === "SET_PUBBLE_ABOUT_CONTENT"){
+        let newState = {...state, pubbleAboutContent:action.payload}
+        return newState;
+    } else if(action.type === "SET_PUBBLE_ABOUT_IMAGES"){
+        let newState = {...state, pubbleAboutImages:action.payload}
         return newState;
     }
     return state
