@@ -29,9 +29,9 @@ const CommerceNav = () => {
                 <img src="/assets/logos/eclahedge.png" alt="Commerce logo" className="h-10" />
             </Link>
             <ul className='flex text-white gap-5 items-center text-sm'>
-                <li><Link to='/eclacommerce'>Home</Link></li>
-                <li><Link to='/eclacommerce'>Investment Plans</Link></li>
-                <li><Link to='/eclacommerce'>Contact Us</Link></li>
+                <li><Link to='/eclahedge'>Home</Link></li>
+                <li><Link to='/eclahedge'>Investment Plans</Link></li>
+                <li><Link to='/eclahedge'>Contact Us</Link></li>
                 {!connected&&<li><button onClick={connectWallet} className="connect_btn px-5 py-2">Connect Wallet</button></li>}
                 {connected&&
                     <div class="relative inline-block text-left">
@@ -59,9 +59,9 @@ const CommerceNav = () => {
                 <div className='w-10/12 h-full bg-eclablue py-5 px-3 flex flex-col gap-7 items-start'>
                     <img src="/assets/logos/eclahedge.png" alt="Commerce logo" className="sm:h-10 h-8" />
                     <ul className='flex flex-col text-white gap-7 text-sm'>
-                        <li><Link onClick={()=>setToggle(false)} to='/eclacommerce'>Home</Link></li>
-                        <li><Link onClick={()=>setToggle(false)} to='/eclacommerce'>Investment Plans</Link></li>
-                        <li><Link onClick={()=>setToggle(false)} to='/eclacommerce'>Contact Us</Link></li>
+                        <li><Link onClick={()=>setToggle(false)} to='/eclahedge'>Home</Link></li>
+                        <li><Link onClick={()=>setToggle(false)} to='/eclahedge'>Investment Plans</Link></li>
+                        <li><Link onClick={()=>setToggle(false)} to='/eclahedge'>Contact Us</Link></li>
                         {!connected&&<li><Link to='/user-dashboard'><button onClick={connectWallet} className="connect_btn px-5 py-2">Connect Wallet</button></Link></li>}
                         {connected&&
                             <div class="relative inline-block text-left w-full">

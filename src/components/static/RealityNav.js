@@ -60,7 +60,7 @@ const RealityNav = () => {
                                 <Link to='/swaplanding' className='text-gray-900 block py-2 text-sm font-medium'>ECLA Dex</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to='/eclacommerce' className='text-gray-900 block py-2 text-sm font-medium'>ECLA Hedge</Link>
+                                <Link to='/eclahedge' className='text-gray-900 block py-2 text-sm font-medium'>ECLA Hedge</Link>
                             </Menu.Item>
                             <Menu.Item>
                                 <Link to='/eclamarket' className='text-gray-900 block py-2 text-sm font-medium'>Market Place</Link>
@@ -212,7 +212,7 @@ const RealityNav = () => {
                                 <Link to='/swaplanding' className='text-gray-300 block py-2 text-sm font-medium'>ECLA DEx</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to='/eclacommerce' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Hedge</Link>
+                                <Link to='/eclahedge' className='text-gray-300 block py-2 text-sm font-medium'>ECLA Hedge</Link>
                             </Menu.Item>
                             <Menu.Item>
                                 <Link to='/eclamarket' className='text-gray-300 block py-2 text-sm font-medium'>Market Place</Link>

@@ -35,7 +35,7 @@ function App() {
         <Route path='/eclamarket' element={<Provider store={coinStore}><MarketPlace/></Provider>}></Route>
         <Route path='/' element={<Provider store={coinStore}><EclaEcosystem/></Provider>}></Route>
         <Route path='/buyecla' element={<Provider store={coinStore}><EclaBuy/></Provider>}></Route>
-        <Route path='/eclacommerce' element={<Provider store={coinStore}><Eclacommerce/></Provider>}></Route>
+        <Route path='/eclahedge' element={<Provider store={coinStore}><Eclacommerce/></Provider>}></Route>
         <Route path='/agriculture' element={<Provider store={coinStore}><Agriculture/></Provider>}></Route>
         <Route path='/real-estate' element={<Provider store={coinStore}><Realestate/></Provider>}></Route>
         <Route path='/digital-access-management' element={<Provider store={coinStore}><DigitalAccessMarket/></Provider>}></Route>

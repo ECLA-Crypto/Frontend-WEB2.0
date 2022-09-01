@@ -13,6 +13,7 @@ module.exports = {
     },
     colors: ({ colors }) => ({
       eclablue: "#23255A",
+      eclaLightBlue: "#00A5EB",
       inherit: colors.inherit,
       current: colors.current,
       transparent: colors.transparent,

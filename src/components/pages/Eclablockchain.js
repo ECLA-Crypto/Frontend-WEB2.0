@@ -12,7 +12,7 @@ const Eclablockchain = () => {
             <BlockChainNav/>
             <div className="flex flex-col text-center mt-24">
                 <h1 className="text-7xl trade_title font-semibold">Strong. Fast. <br/> Precise.</h1>
-                <p className="text-xs text-gray-300 mt-4 w-11/12 sm:w-96 mx-auto text-lg">Decentralized blockchain built to enable scalable, user-friendly apps for the world.</p>
+                <p className="text-gray-300 mt-4 w-11/12 sm:w-96 mx-auto text-lg">Decentralized blockchain built to enable scalable, user-friendly apps for the world.</p>
                 <div className="flex reltive">
                     <span className="blur_bg_eco w-48 rounded-full h-48 sm:left-52 z-0"></span>
                     <img src="/assets/logos/bigEclaLogo.png" className="h-56 w-56 mx-auto mt-20 z-20" alt="Ecla Logo"/>

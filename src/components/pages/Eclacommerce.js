@@ -26,12 +26,14 @@ const Eclacommerce = () => {
     
   return (
     <div className="w-full">
-        <div className="hero_Section flex-col ecosys_hero h-screen">
-            <CommerceNav/>
-            <CommerceHero/>
+        <div className="hero_Section flex-col ecosys_hero h-fit">
+            <div className="h-screen">
+              <CommerceNav/>
+              <CommerceHero/>
+            </div>
+            <InvestmentSection/>
+            <Footer/>
         </div>
-        <InvestmentSection/>
-        <Footer/>
     </div>
   )
 }

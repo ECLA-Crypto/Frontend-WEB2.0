@@ -218,7 +218,7 @@ code {
   @apply w-full md:h-fit h-fit flex px-5 md:px-10 xl:px-0 
 }
 .hero_Section {
-  @apply w-full h-screen flex px-5 md:px-10 xl:px-0 
+  @apply w-full flex px-5 md:px-10 xl:px-0 
 }
 .categories_Section {
   @apply w-full flex px-5 md:px-10 xl:px-0 

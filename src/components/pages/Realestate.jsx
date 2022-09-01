@@ -25,34 +25,34 @@ const Realestate = () => {
     }, [dispatch])
   return (
     <div className="w-full">
-        <div className="categories_Section flex-col ecosys_hero h-72">
+        <div className="categories_Section flex-col ecosys_hero h-fit">
             <CommerceNav/>
-            <div className="w-full flex h-fit my-auto">
+            <div className="w-full flex h-fit my-20">
                 <div className="max_size my-auto h-full flex flex-col">
                     <h1 className="text-center text-5xl text-white font-semibold">Real Estate</h1>
                 </div>
             </div>
-        </div>
-        <div className="w-full flex mt-5">
-            <div className="max_size my-auto flex flex-col">
-                {realestate&&(
-                    <div className='flex flex-wrap'>
-                        {realestate.map((item,index)=>{
-                            return (
-                            <div key={index} className='md:w-1/2 w-full lg:w-1/3 p-5'>
-                                <div className='bg-white w-full p-5 rounded flex flex-col h-full' onClick={()=>productPage(item)}>
-                                    <div className='w-full rounded-t h-48 bg-gray-500'>{item.fields.image&&(<img src={item.fields.image.fields.file.url} alt={item.fields.image.fields.title}/>)}</div>
-                                    <h1 className='text-gray-700 text-lg font-semibold mt-5'>{item.fields.plan}</h1>
-                                    <p className='text-sm text-gray-700 font-semibold mt-3'>{item.fields.minInvestment}</p>
+            <div className="w-full flex mt-5">
+                <div className="max_size my-auto flex flex-col">
+                    {realestate&&(
+                        <div className='flex flex-wrap'>
+                            {realestate.map((item,index)=>{
+                                return (
+                                <div key={index} className='md:w-1/2 w-full lg:w-1/3 p-5'>
+                                    <div className='bg-white w-full p-5 rounded-3xl flex flex-col h-full' onClick={()=>productPage(item)}>
+                                        <div className='w-full rounded-t-3xl h-48 bg-gray-500'>{item.fields.image&&(<img src={item.fields.image.fields.file.url} alt={item.fields.image.fields.title}/>)}</div>
+                                        <h1 className='text-gray-700 text-lg font-semibold mt-5'>{item.fields.plan}</h1>
+                                        <p className='text-sm text-gray-700 font-semibold mt-3'>{item.fields.minInvestment}</p>
+                                    </div>
                                 </div>
-                            </div>
-                            )
-                        })}
-                    </div>
-                )}
+                                )
+                            })}
+                        </div>
+                    )}
+                </div>
             </div>
+            <Footer/>
         </div>
-        <Footer/>
     </div>
   )
 }
