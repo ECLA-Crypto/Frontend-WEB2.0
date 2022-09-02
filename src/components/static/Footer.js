@@ -2,8 +2,9 @@ const Footer = () => {
   return (
     <footer className="border-t border-white w-full mt-20">
         <div className="w-4/5 py-8 flex md:flex-row flex-col justify-between items-center text-white mx-auto">
-            <div className="flex-col flex">
+            <div className="flex-col flex md:items-start items-center">
               <small className='uppercase font-semibold'>@2022. ECLA llc</small>
+              <small className='uppercase font-semibold'>support@ecla.network</small>
               <small className="uppercase font-semibold">16192 COASTAL HWY, LEWES, DELAWARE</small>
             </div>
             <div className="flex items-center gap-3 mt-3 md:mt-0">

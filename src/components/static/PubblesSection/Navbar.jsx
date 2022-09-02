@@ -1,10 +1,8 @@
 import { useState } from 'react'
 import {Link} from 'react-router-dom'
-import { BiMenuAltRight,BiUserCircle } from 'react-icons/bi';
+import { BiMenuAltRight } from 'react-icons/bi';
 import { AiOutlineClose } from 'react-icons/ai';
 const Navbar = () => {
-    const [menu, setMenu] = useState(false)
-    const [connected, setConnected] = useState(false)
     const [toggle, setToggle] = useState(false)
     const [classs, setClasss] = useState(false)
     const stickyTop = () => {
@@ -15,13 +13,6 @@ const Navbar = () => {
         }
     }
     window.addEventListener('scroll', stickyTop)
-    const connectWallet = () => {
-        setConnected(true)
-    }
-    const close = () => {
-        setMenu(false)
-        setToggle(false)
-    }
   return (
     <div className={`w-full py-5 flex z-40 ${classs?'py-2 px-3 bg-eclablue fixed z-40 left-0 top-0':''}`}>
         <nav className="md_max_size md:flex hidden justify-between items-center">
