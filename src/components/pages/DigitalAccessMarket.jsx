@@ -29,7 +29,7 @@ const DigitalAccessMarket = () => {
             <CommerceNav/>
             <div className="w-full flex h-fit my-20">
                 <div className="max_size my-auto h-full flex flex-col">
-                    <h1 className="text-center text-5xl text-white font-semibold">Digital Access Market</h1>
+                    <h1 className="text-center text-5xl text-white font-semibold">Digital Asset Market</h1>
                 </div>
             </div>
             <div className="w-full flex mt-5">

@@ -134,7 +134,7 @@ const Header = () => {
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Explore</Link>
                                 </Menu.Item>
                                 <Menu.Item>
-                                    <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>ECLAbeach</Link>
+                                    <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>ECLA bridge</Link>
                                 </Menu.Item>
                                 <Menu.Item>
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Stake Distribution</Link>
@@ -407,7 +407,7 @@ const Header = () => {
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Explore</Link>
                                 </Menu.Item>
                                 <Menu.Item>
-                                    <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>ECLAbeach</Link>
+                                    <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>ECLA bridge</Link>
                                 </Menu.Item>
                                 <Menu.Item>
                                     <Link to='' className='text-gray-300 block py-2 text-sm font-medium'>Stake Distribution</Link>
