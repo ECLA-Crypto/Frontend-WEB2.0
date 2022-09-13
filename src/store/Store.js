@@ -18,6 +18,7 @@ const defaultState = {
     pubbleHeroSection: false,
     pubbleAboutContent: false,
     pubbleAboutImages: false,
+    guardLocation: false,
 }
 const coinReducer = (state=defaultState, action ) =>{
     if(action.type === "SET_TOP_COIN"){
@@ -76,6 +77,9 @@ const coinReducer = (state=defaultState, action ) =>{
         return newState;
     } else if(action.type === "SET_PUBBLE_ABOUT_IMAGES"){
         let newState = {...state, pubbleAboutImages:action.payload}
+        return newState;
+    } else if(action.type === "SET_GUARD_LOCATION"){
+        let newState = {...state, guardLocation:action.payload}
         return newState;
     }
     return state
