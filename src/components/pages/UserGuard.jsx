@@ -18,18 +18,19 @@ const UserGuard = ({location}) => {
             navigate('/')
         } else {
           const verify = () => {
-              axios.get('http://localhost:3600/api/user/verify', { headers: {'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json', 'Accept':'application/json' }})
+              axios.get('https://ecla-backend.vercel.app/api/user/verify', { headers: {'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json', 'Accept':'application/json' }})
               .then(res=>{
-                console.log(res.data)
                 if (res.data.status){
                   if (location==='editPage') {
-                      setComponent(<Editprofile/>)
+                      setComponent(<Editprofile walletAddress={res.data.message.walletAddress}/>)
                   } else {
-                      navigate('/')
+                      navigate('/');
+                      enqueueSnackbar('An Error Occured, Please Check Your Internet Connection.', { variant:"error" });
                   }
                 }else{
                     navigate('/')
                     localStorage.removeItem('token')
+                    enqueueSnackbar(`${res.data.message}`, { variant:"error" });
                   }
               }).catch(err =>{
                   enqueueSnackbar('An Error Occured, Please Check Your Internet Connection.', { variant:"error" });
