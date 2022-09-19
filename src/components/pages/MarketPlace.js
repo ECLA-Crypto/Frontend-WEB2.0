@@ -58,7 +58,7 @@ const MarketPlace = () => {
             <MarketplaceNav/>
             <div className="h-full py-20 flex flex-col justify-between items-center gap-10">
                 <span className="text-white w-11/12 sm:w-1/2 mx-auto">
-                    <h1 className="sm:text-3xl text-3xl lg:text-5xl font-semibold text-center">Discover, collect, extraordinary NFT for real people</h1>
+                    <h1 className="sm:text-3xl text-3xl lg:text-5xl font-semibold text-center">Find and Collect Expceptional NFts by Real People</h1>
                     <div className="flex gap-5 mt-7 mx-auto w-fit">
                         <button className="connect_btn px-7 md:px-10 py-2.5 text-white text-sm">Explore</button>
                         <button className="trade md:px-7 px-5 py-2.5 text-white text-sm">Create NFT</button>

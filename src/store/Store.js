@@ -19,6 +19,10 @@ const defaultState = {
     pubbleAboutContent: false,
     pubbleAboutImages: false,
     guardLocation: false,
+    profileUsername: false,
+    profileEmail: false,
+    profileWalletAddress: false,
+    profileImage: false,
 }
 const coinReducer = (state=defaultState, action ) =>{
     if(action.type === "SET_TOP_COIN"){
@@ -81,7 +85,19 @@ const coinReducer = (state=defaultState, action ) =>{
     } else if(action.type === "SET_GUARD_LOCATION"){
         let newState = {...state, guardLocation:action.payload}
         return newState;
-    }
+    } else if(action.type === "SET_PROFILE_USERNAME"){
+        let newState = {...state, profileUsername:action.payload}
+        return newState;
+    } else if(action.type === "SET_PROFILE_EMAIL"){
+        let newState = {...state, profileEmail:action.payload}
+        return newState;
+    } else if(action.type === "SET_PROFILE_WALLETADDRESS"){
+        let newState = {...state, profileWalletAddress:action.payload}
+        return newState;
+    } else if(action.type === "SET_PROFILE_IMAGE"){
+        let newState = {...state, profileImage:action.payload}
+        return newState;
+    } 
     return state
 }
 
