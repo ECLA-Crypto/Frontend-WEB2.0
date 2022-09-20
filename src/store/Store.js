@@ -23,6 +23,7 @@ const defaultState = {
     profileEmail: false,
     profileWalletAddress: false,
     profileImage: false,
+    hedgeTransaction: false,
 }
 const coinReducer = (state=defaultState, action ) =>{
     if(action.type === "SET_TOP_COIN"){
@@ -96,6 +97,9 @@ const coinReducer = (state=defaultState, action ) =>{
         return newState;
     } else if(action.type === "SET_PROFILE_IMAGE"){
         let newState = {...state, profileImage:action.payload}
+        return newState;
+    } else if(action.type === "SET_HEDGE_TRANSACTION"){
+        let newState = {...state, hedgeTransaction:action.payload}
         return newState;
     } 
     return state

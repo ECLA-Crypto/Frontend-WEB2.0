@@ -1,7 +1,42 @@
+import axios from "axios"
+import { useSnackbar } from "notistack"
+import { useEffect } from "react"
+import { useNavigate } from "react-router-dom"
+import {useSelector, useDispatch} from 'react-redux'
 import CommerceNav from "../static/CommerceSection/CommerceNav"
 import InvestmentChart from "../static/CommerceSection/InvestmentChart"
 
 const UserDashboard = () => {
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    let token = localStorage.accessToken
+    const { enqueueSnackbar } = useSnackbar();
+    const recentTransaction = useSelector(state=>state.hedgeTransaction)
+    useEffect(() => {
+        if (token) {
+            const verify = () => {
+                axios.get('https://ecla-backend.vercel.app/api/user/verify', { headers: {'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json', 'Accept':'application/json' }})
+                .then(res=>{
+                  if (res.data.status){
+                    axios.post('https://ecla-backend.vercel.app/api/user/findWallet',{walletAddress:res.data.message.walletAddress}).then(res=>{
+                        dispatch({type:"SET_HEDGE_TRANSACTION", payload:res.data.result.transactionHistory})
+                    }).catch(err=>{
+                        enqueueSnackbar(`${err.message}`, { variant:"error" });
+                    })
+                  }else{
+                      localStorage.removeItem('token')
+                      enqueueSnackbar(`${res.data.message}`, { variant:"error" });
+                    }
+                }).catch(err =>{
+                    enqueueSnackbar('An Error Occured, Please Check Your Internet Connection.', { variant:"error" });
+                })
+            }
+            verify();
+        } else {
+            navigate('/')
+        }
+    }, [dispatch,enqueueSnackbar])
+    
   return (
     <div className="w-full">
         <div className="categories_Section flex-col">
@@ -31,40 +66,29 @@ const UserDashboard = () => {
                             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr>
                                     <th scope="col" className="py-3 px-6">
-                                        Product name
+                                        S/N
                                     </th>
                                     <th scope="col" className="py-3 px-6">
-                                        Category
+                                        Investment Plan
                                     </th>
                                     <th scope="col" className="py-3 px-6">
                                         Price
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                    <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        Apple MacBook Pro 17"
-                                    </th>
-                                    <td className="py-4 px-6">
-                                        Laptop
-                                    </td>
-                                    <td className="py-4 px-6">
-                                        $2999
-                                    </td>
-                                </tr>
-                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                    <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        Microsoft Surface Pro
-                                    </th>
-                                    <td className="py-4 px-6">
-                                        Laptop PC
-                                    </td>
-                                    <td className="py-4 px-6">
-                                        $1999
-                                    </td>
-                                </tr>
-                            </tbody>
+                            {recentTransaction&&(
+                                <tbody>
+                                    {recentTransaction.map((item,index)=>{
+                                        return (
+                                            <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">{index+1}</th>
+                                                <td className="py-4 px-6">{item.plan}</td>
+                                                <td className="py-4 px-6">{item.price}</td>
+                                            </tr>
+                                        )
+                                    })}
+                                </tbody>
+                            )}
                         </table>
                     </div>
                 </div>
@@ -74,40 +98,29 @@ const UserDashboard = () => {
                             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr>
                                     <th scope="col" className="py-3 px-6">
-                                        Product name
+                                        S/N
                                     </th>
                                     <th scope="col" className="py-3 px-6">
-                                        Category
+                                        Investment Plan
                                     </th>
                                     <th scope="col" className="py-3 px-6">
                                         Price
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                    <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        Apple MacBook Pro 17"
-                                    </th>
-                                    <td className="py-4 px-6">
-                                        Laptop
-                                    </td>
-                                    <td className="py-4 px-6">
-                                        $2999
-                                    </td>
-                                </tr>
-                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                    <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        Microsoft Surface Pro
-                                    </th>
-                                    <td className="py-4 px-6">
-                                        Laptop PC
-                                    </td>
-                                    <td className="py-4 px-6">
-                                        $1999
-                                    </td>
-                                </tr>
-                            </tbody>
+                            {recentTransaction&&(
+                                <tbody>
+                                    {recentTransaction.map((item,index)=>{
+                                        return (
+                                            <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">{index+1}</th>
+                                                <td className="py-4 px-6">{item.plan}</td>
+                                                <td className="py-4 px-6">{item.price}</td>
+                                            </tr>
+                                        )
+                                    })}
+                                </tbody>
+                            )}
                         </table>
                     </div>
                 </div>
