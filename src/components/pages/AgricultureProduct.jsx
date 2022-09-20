@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { createClient } from "contentful";
 import CommerceNav from "../static/CommerceSection/CommerceNav";
 import { useDispatch, useSelector } from "react-redux";
@@ -44,7 +44,7 @@ const AgricultureProduct = () => {
             setWalletAddress(false)
         }
         getInvestment()
-    }, [dispatch,params,enqueueSnackbar])
+    }, [dispatch,params,enqueueSnackbar,token])
     const invest = (info) => {
         console.log(info)
         axios.put('https://ecla-backend.vercel.app/api/user/transactionHistory',{walletAddress:info.walletAddress, product:{plan:info.product.plan,price:info.product.minInvestment}}).then(res=>{

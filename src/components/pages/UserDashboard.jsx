@@ -35,7 +35,7 @@ const UserDashboard = () => {
         } else {
             navigate('/')
         }
-    }, [dispatch,enqueueSnackbar])
+    }, [dispatch,enqueueSnackbar,navigate,token])
     
   return (
     <div className="w-full">
