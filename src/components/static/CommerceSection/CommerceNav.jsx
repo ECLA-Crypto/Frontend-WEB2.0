@@ -85,7 +85,7 @@ const CommerceNav = () => {
                                     <div className="absolute left-0 mt-2 w-52 origin-top-right bg-white outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
                                         <div className="py-2 px-5" role="none">
                                             <Link to='/user-dashboard'><p className='text-gray-700 py-2 font-semibold tracking-wider' onClick={close}>Dashboard</p></Link>
-                                            <Link to='/edi-profile'><p className='text-gray-700 py-2 font-semibold tracking-wider' onClick={close}>Edit Profile</p></Link>
+                                            <Link to='/edit-profile'><p className='text-gray-700 py-2 font-semibold tracking-wider' onClick={close}>Edit Profile</p></Link>
                                             <Link to='/affiliate'><p className='text-gray-700 py-2 font-semibold tracking-wider' onClick={close}>Affiliate</p></Link>
                                         </div>
                                     </div>

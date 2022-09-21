@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import Loader from '../static/Loader'
 import { useSnackbar } from 'notistack';
 import Editprofile from './Editprofile'
+import UserDashboard from './UserDashboard'
 
 const UserGuard = ({location}) => {
     const { enqueueSnackbar } = useSnackbar();
@@ -23,6 +24,8 @@ const UserGuard = ({location}) => {
                 if (res.data.status){
                   if (location==='editPage') {
                       setComponent(<Editprofile walletAddress={res.data.message.walletAddress}/>)
+                  } else if (location==='dashboard') {
+                      setComponent(<UserDashboard walletAddress={res.data.message.walletAddress}/>)
                   } else {
                       navigate('/');
                       enqueueSnackbar('An Error Occured, Please Check Your Internet Connection.', { variant:"error" });

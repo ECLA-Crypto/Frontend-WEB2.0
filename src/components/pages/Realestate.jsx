@@ -40,7 +40,7 @@ const Realestate = () => {
                                 return (
                                 <div key={index} className='md:w-1/2 w-full lg:w-1/3 p-5'>
                                     <div className='bg-white w-full p-5 rounded-3xl flex flex-col h-full' onClick={()=>productPage(item)}>
-                                        <div className='w-full rounded-t-3xl h-48 bg-gray-500'>{item.fields.image&&(<img src={item.fields.image.fields.file.url} alt={item.fields.image.fields.title}/>)}</div>
+                                        <div className='w-full rounded-t-3xl h-48 bg-gray-500'>{item.fields.image&&(<img src={item.fields.image.fields.file.url} className='w-full h-full object-cover' alt={item.fields.image.fields.title}/>)}</div>
                                         <h1 className='text-gray-700 text-lg font-semibold mt-5'>{item.fields.plan}</h1>
                                         <p className='text-sm text-gray-700 font-semibold mt-3'>{item.fields.minInvestment}</p>
                                     </div>
