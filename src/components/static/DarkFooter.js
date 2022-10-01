@@ -4,9 +4,9 @@ const DarkFooter = () => {
     <footer className="bg-white w-full">
         <div className="w-4/5 py-8 flex md:flex-row flex-col justify-between items-center text-gray-900 mx-auto">
             <div className="flex-col flex gap-3 items-center md:items-start">
-              <small className='uppercase font-semibold'>@2022. ECLA llc</small>
+              <small className='uppercase font-semibold'>Ecla LLC</small>
               <small className='uppercase font-semibold'>support@ecla.network</small>
-              <small className="uppercase font-semibold">16192 COASTAL HWY, LEWES, DELAWARE</small>
+              <small className="uppercase font-semibold">16192 Coastal Highway, Lewes, Delaware 19958 USA</small>
             </div>
             <div className="flex items-center gap-5 mt-3 md:mt-0">
                 <a href='https://t.me/eclaecosystem' rel="noreferrer" target="_blank"><img src="/assets/icons/darkTelegram.svg" className="h-6" alt="Telegram"/></a>
